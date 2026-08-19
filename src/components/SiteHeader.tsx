@@ -73,6 +73,7 @@ export function SiteHeader() {
             height={509}
             loading="eager"
             fetchPriority="high"
+            sizes="130px"
             className="h-9 w-auto md:h-11"
           />
           <span className="sr-only">{site.legalName}</span>

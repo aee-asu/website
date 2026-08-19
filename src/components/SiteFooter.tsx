@@ -24,6 +24,7 @@ export function SiteFooter() {
                 alt=""
                 width={1200}
                 height={509}
+                sizes="170px"
                 className="h-14 w-auto"
               />
             </div>

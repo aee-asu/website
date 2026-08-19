@@ -14,8 +14,9 @@ export const site = {
   tagline: "Association of Energy Engineers",
   description:
     "A student chapter at Arizona State University for people who want to work on real energy problems — power systems, storage, buildings, data centers, materials, markets and policy.",
-  /** Set this once the site has a permanent home. Used for canonical + OG URLs. */
-  url: "https://aeeasu.org",
+  /** Production address. Feeds canonical URLs, the sitemap and social previews.
+   *  Update this the moment a custom domain is added in Vercel. */
+  url: "https://website-rho-dusky-59.vercel.app",
   campus: "Tempe, Arizona",
   founded: "2026",
 } as const;
