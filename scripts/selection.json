@@ -1,0 +1,25 @@
+[
+  { "src": "Photos/IMG_9741.HEIC", "dest": "hero/hero-workroom.jpg", "maxWidth": 2600 },
+  { "src": "Photos/IMG_3398.HEIC", "dest": "hero/courtyard-lunch.jpg", "maxWidth": 2400 },
+
+  { "src": "Photos/DFCD2144-DC98-415C-80D3-BE0736B2C131_1_105_c.jpeg", "dest": "events/hackathon-2026-group.jpg", "maxWidth": 1024 },
+  { "src": "Photos/IMG_9771.HEIC", "dest": "events/hackathon-2026-awards.jpg", "maxWidth": 1800 },
+  { "src": "Photos/5ef534fc-6adb-4f75-ab14-41c5d073ffde.jpg", "dest": "events/hackathon-2026-demo.jpg", "maxWidth": 1200 },
+
+  { "src": "Photos/IMG_9731.HEIC", "dest": "gallery/01-teams-working.jpg", "maxWidth": 1800 },
+  { "src": "Photos/IMG_9738.HEIC", "dest": "gallery/02-mentor-review.jpg", "maxWidth": 2000 },
+  { "src": "Photos/IMG_9744.HEIC", "dest": "gallery/03-team-table.jpg", "maxWidth": 2000 },
+  { "src": "Photos/_DSC7439.JPG", "dest": "gallery/04-opening-session.jpg", "maxWidth": 1800 },
+  { "src": "Photos/8FA75E40-9134-49AF-AAE0-E9B69920013B_1_105_c.jpeg", "dest": "gallery/05-organizers.jpg", "maxWidth": 1024 },
+  { "src": "Photos/IMG_9745.HEIC", "dest": "gallery/06-judges.jpg", "maxWidth": 1600 },
+  { "src": "Photos/IMG_9763.HEIC", "dest": "gallery/07-award-hardware.jpg", "maxWidth": 1600 },
+  { "src": "Photos/IMG_9777.HEIC", "dest": "gallery/08-award-group.jpg", "maxWidth": 1600 },
+  { "src": "Photos/IMG_4012.JPEG", "dest": "gallery/09-certificate.jpg", "maxWidth": 1400 },
+  { "src": "Photos/IMG_9829.HEIC", "dest": "gallery/10-award-software.jpg", "maxWidth": 1600 },
+  { "src": "Photos/5bbed7ae-4ba7-4487-abe4-07e41ca7ef3e.JPG", "dest": "gallery/11-team-laptops.jpg", "maxWidth": 1200 },
+  { "src": "Photos/6430584a-f5c9-42fa-8d2f-e74734497c3a.JPG", "dest": "gallery/12-demo-laptop.jpg", "maxWidth": 1200 },
+  { "src": "Photos/8867ec0a-fa67-4d3c-bee6-cc7cfea07ac9.JPG", "dest": "gallery/13-hardware-parts.jpg", "maxWidth": 1200 },
+  { "src": "Photos/fe4a9a0c-5717-4bf5-8e46-e74309f5fbbe.JPG", "dest": "gallery/14-solar-prototype.jpg", "maxWidth": 1200 },
+  { "src": "Photos/f2385a9c-f7fd-4adf-9e81-353c0b504256.JPG", "dest": "gallery/15-discussion.jpg", "maxWidth": 1800 },
+  { "src": "Photos/151b7101-804e-41c2-91d1-0aae04a3e4cf.jpg", "dest": "gallery/16-huddle.jpg", "maxWidth": 1200 }
+]
