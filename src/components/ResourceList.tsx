@@ -14,7 +14,12 @@ function ExternalArrow() {
 
 export function ResourceList({ group, index }: { group: ResourceGroup; index: number }) {
   return (
-    <Reveal as="section" className="rule-t grid gap-8 py-10 md:grid-cols-12 md:py-14">
+    <Reveal
+      as="section"
+      id={group.id}
+      /* scroll-mt clears the sticky header when arriving from /research#aee. */
+      className="rule-t grid gap-8 scroll-mt-28 py-10 md:grid-cols-12 md:py-14"
+    >
       <div className="md:col-span-4">
         <p className="label text-maroon">{String(index + 1).padStart(2, "0")}</p>
         <h3 className="display mt-4 text-[1.75rem] text-ink md:text-[2rem]">{group.title}</h3>

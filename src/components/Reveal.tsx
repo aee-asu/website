@@ -8,6 +8,8 @@ type RevealProps = {
   delay?: number;
   as?: ElementType;
   className?: string;
+  /** Set when the element is a link target, e.g. /research#aee. */
+  id?: string;
 };
 
 /**
@@ -19,7 +21,7 @@ type RevealProps = {
  * content is always visible without JavaScript, and `prefers-reduced-motion`
  * removes the movement entirely.
  */
-export function Reveal({ children, delay = 0, as, className = "" }: RevealProps) {
+export function Reveal({ children, delay = 0, as, className = "", id }: RevealProps) {
   const Tag = (as ?? "div") as ElementType;
   const ref = useRef<HTMLElement>(null);
 
@@ -55,6 +57,7 @@ export function Reveal({ children, delay = 0, as, className = "" }: RevealProps)
   return (
     <Tag
       ref={ref}
+      id={id}
       className={`reveal ${className}`}
       data-shown="false"
       style={delay ? ({ "--reveal-delay": `${delay}ms` } as CSSProperties) : undefined}

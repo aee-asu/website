@@ -89,8 +89,8 @@ export default function JoinPage() {
           intro={
             <p>
               The roster makes you a member. These are where being a member is actually worth
-              something — you can join both without joining the chapter first, but do the roster
-              anyway.
+              something — you can join any of them without joining the chapter first, but do the
+              roster anyway.
             </p>
           }
         />

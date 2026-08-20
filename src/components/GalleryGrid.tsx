@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import type { GalleryImage } from "@/data/gallery";
 
@@ -13,6 +13,12 @@ import type { GalleryImage } from "@/data/gallery";
 export function GalleryGrid({ images }: { images: GalleryImage[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const current = openIndex === null ? null : images[openIndex];
+  const isOpen = openIndex !== null;
+
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  /** The thumbnail that opened the lightbox, so focus can go back to it. */
+  const openerRef = useRef<HTMLElement | null>(null);
 
   const close = useCallback(() => setOpenIndex(null), []);
   const step = useCallback(
@@ -23,25 +29,59 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
     [images.length],
   );
 
+  /*
+    Keyboard behaviour for the lightbox. Focus moves into the dialog on open,
+    is kept inside it while Tabbing, and returns to the thumbnail on close —
+    otherwise a keyboard user is left navigating the page behind the overlay.
+    Keyed on `isOpen` rather than `openIndex` so stepping between images does
+    not tear the whole thing down and rebuild it.
+  */
   useEffect(() => {
-    if (openIndex === null) return;
+    if (!isOpen) return;
 
     const { body } = document;
     const previousOverflow = body.style.overflow;
     body.style.overflow = "hidden";
 
+    const opener = document.activeElement;
+    openerRef.current = opener instanceof HTMLElement ? opener : null;
+    closeRef.current?.focus();
+
+    function trapTab(event: KeyboardEvent) {
+      const dialog = dialogRef.current;
+      if (!dialog) return;
+
+      const focusable = Array.from(dialog.querySelectorAll<HTMLElement>("button"));
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+      const inside = active instanceof Node && dialog.contains(active);
+
+      if (event.shiftKey && (!inside || active === first)) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && (!inside || active === last)) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") close();
       if (event.key === "ArrowRight") step(1);
       if (event.key === "ArrowLeft") step(-1);
+      if (event.key === "Tab") trapTab(event);
     }
 
     document.addEventListener("keydown", onKeyDown);
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       body.style.overflow = previousOverflow;
+      openerRef.current?.focus();
     };
-  }, [openIndex, close, step]);
+  }, [isOpen, close, step]);
 
   return (
     <>
@@ -82,6 +122,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
 
       {current ? (
         <div
+          ref={dialogRef}
           role="dialog"
           aria-modal="true"
           aria-label={current.alt}
@@ -93,7 +134,12 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
               <span className="mx-2 text-ash">/</span>
               {String(images.length).padStart(2, "0")}
             </p>
-            <button type="button" onClick={close} className="label text-mist hover:text-gold">
+            <button
+              ref={closeRef}
+              type="button"
+              onClick={close}
+              className="label text-mist hover:text-gold"
+            >
               Close ✕
             </button>
           </div>

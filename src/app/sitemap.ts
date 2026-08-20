@@ -12,12 +12,14 @@ const routes = [
   { path: "/partner", priority: 0.8 },
 ];
 
+/*
+  `lastModified` is deliberately omitted. The only value available at build time
+  is "now", which would tell search engines that every page changed on every
+  deploy — a worse signal than no signal at all.
+*/
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   return routes.map((route) => ({
     url: `${site.url}${route.path}`,
-    lastModified,
     changeFrequency: route.path === "/events" ? "weekly" : "monthly",
     priority: route.priority,
   }));

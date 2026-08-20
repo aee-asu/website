@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/events" },
 };
 
+/**
+ * Upcoming and past are worked out from today's date at render time, so a
+ * purely static page would keep an event under "Upcoming" until the next
+ * deploy. Revalidating hourly means an event moves to the archive on its own.
+ */
+export const revalidate = 3600;
+
 export default function EventsPage() {
   const upcoming = upcomingEvents();
   const past = pastEvents();

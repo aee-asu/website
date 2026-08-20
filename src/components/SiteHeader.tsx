@@ -139,18 +139,24 @@ export function SiteHeader() {
         className="fixed left-0 right-0 top-[4.5rem] z-50 h-[calc(100dvh-4.5rem)] overflow-y-auto bg-paper lg:hidden"
       >
         <nav aria-label="Primary, mobile" className="shell flex flex-col pb-16 pt-2">
-          {nav.map((item, index) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="display rule-b py-6 text-[2rem] text-ink transition-colors hover:text-maroon"
-            >
-              <span className="label mr-4 align-middle text-ash">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item, index) => {
+            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={`display rule-b py-6 text-[2rem] transition-colors hover:text-maroon ${
+                  active ? "text-maroon" : "text-ink"
+                }`}
+              >
+                <span className="label mr-4 align-middle text-ash">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                {item.label}
+              </Link>
+            );
+          })}
           <Link
             href="/join"
             className="mt-8 inline-flex items-center justify-between bg-ink px-6 py-5 text-lg text-paper"

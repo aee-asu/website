@@ -67,3 +67,6 @@ yarn-error.log*
 /Form .png
 /Test 1.png
 /Test 2.png
+
+# Screenshots and phone exports dropped in the project root
+/WhatsApp Image*

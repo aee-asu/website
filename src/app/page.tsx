@@ -10,6 +10,9 @@ import { links, site } from "@/data/site";
 import { featuredEvent, upcomingEvents } from "@/lib/events";
 import { formatDate } from "@/lib/date";
 
+/** Same reason as the events page: the upcoming list is date-dependent. */
+export const revalidate = 3600;
+
 export default function HomePage() {
   const upcoming = upcomingEvents().slice(0, 3);
   const feature = featuredEvent();
