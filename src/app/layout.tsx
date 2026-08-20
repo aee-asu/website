@@ -77,6 +77,12 @@ export const metadata: Metadata = {
     images: ["/images/og/og-default.jpg"],
   },
   robots: { index: true, follow: true },
+  /* Search Console ownership for the chapter account. The matching HTML files
+     under public/ verify the same thing by a second route — Google accepts
+     either, and keeping both means one being lost does not un-verify us. */
+  verification: {
+    google: "5LXsBT7qSGxeXPNgzehqHc8poD6Eshq3qz5-j3CbGvA",
+  },
 };
 
 export const viewport: Viewport = {
