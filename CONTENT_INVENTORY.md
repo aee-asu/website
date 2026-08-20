@@ -98,12 +98,17 @@ Everything factual on the site traces to a document in the archive:
 | Partner clubs: IEEE, ASME, Robotics | Same planning document, header |
 | Officers and advisor | Provided directly, corroborated by `Club re register .png` |
 | Fall 2026 events | Provided directly |
+| Spring 2026 sessions — dates, times, rooms, speakers | Screenshots of the chapter's Instagram (@aee_asu) posts, supplied by the president |
 
 ---
 
 ## 5. Open items for an officer
 
-1. **Spring 2026 speaker series.** The chapter deck lists six sessions between 4 February and 1 April 2026 (introduction session, Arizona energy startups, battery startups, microgrids + LEAPS visit, energy-efficiency training, grid cybersecurity), each with named speakers. That deck is a *plan*, and no photographs or notes confirm which sessions ran. They are in `src/data/events.ts` as `draftEvents` and **do not appear on the site**. Confirm which happened, move them into the `events` array with `status: "published"`, and add speaker names only where the speaker is happy to be named.
+1. **Spring 2026 speaker series.** Mostly resolved. The president supplied screenshots of the chapter's own Instagram (@aee_asu) posts, which corroborate date, time, room and speaker for six sessions — four of the deck's six, plus three events the deck never listed (a founders/CEOs discussion on 4 March, a data-centres session on 25 March, and a project life cycle talk on 16 April). Those are now in the `events` array as published. Corrections the posts forced: battery startups was **19 February, not 18**, and the LEAPS visit was at the **Polytechnic** campus, not Tempe.
+
+   Still `draftEvents`, because no post covers them: the **4 February introduction session** and the **1 April grid cybersecurity** session.
+
+   Every speaker is named. Serhii Kaminsky (SorbiForce), Manas Pathak (Grid8, EarthEn), Wayne Dobberpuhl (Nexus Integrated Solutions) and Tino Rosas were named and pictured by the chapter in its own public posts. Kris Saunders (Power48), Victor Atlasman (WattEV) and Vladimir Abdelnour — the PhD student and then chapter president who led the data-centres session — appear on the president's direct confirmation, since the 11 February graphic gave surnames only and the Instagram caption alone was not taken as consent to a permanent credit.
 
 2. **Sponsors and supporters.** The planning document lists OpenVPP, Collide.io, Phoenix Contact, Lovable, Kemabonta Ventures, Grid8 and ASU Venture Devils as confirmed hackathon sponsors, and names APS and BKPK as track challenge providers. **None of this is currently published** — describing an organisation as a sponsor or partner on a public page deserves a second check first. Decide whether to add a supporters line to the hackathon entry.
 
@@ -111,9 +116,9 @@ Everything factual on the site traces to a document in the archive:
 
 4. **Photograph consent.** Every published photograph was taken at a large open event on campus, and several show identifiable faces at close range. This is normal for a student organisation, but the Gallery page carries a takedown note pointing at the contact page. If the chapter has a photo-release policy, this is the place to apply it.
 
-5. **Officer photographs and programs.** Leadership is typographic only — no headshots and no degree programs, because neither was verified. Add them in `src/data/leadership.ts` when available.
+5. **Officer photographs.** Degree programs are now published (source: the officers' ASU iSearch directory entries, supplied by the president). Leadership is still typographic — no headshots, because none has been supplied and approved. Add them in `src/data/leadership.ts` when available. Officers' personal ASU email addresses and their unrelated lab/employment titles are deliberately **not** published; the chapter address is the public contact.
 
-6. **Domain.** `src/data/site.ts` currently sets `url: "https://aeeasu.org"` as a placeholder. Canonical URLs, the sitemap and social previews all read from it — update it once the real address exists.
+6. **Domain.** Resolved — `src/data/site.ts` sets `url: "https://www.aeeasu.com"`, the live address. Canonical URLs, the sitemap and social previews all read from it, and it is baked in at build time, so any future change needs a redeploy.
 
 7. **Chapter email.** `aeeasustudentchapter@gmail.com` is published on the Events, Join and footer areas, as supplied. The only address found in the archive itself was the founding president's personal ASU address, which is deliberately not published.
 
