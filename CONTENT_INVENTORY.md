@@ -48,7 +48,7 @@ Processing applied to every published image (`scripts/prepare_images.py`):
 | `Photos/IMG_9738.HEIC` | Gallery + Events page break | `public/images/gallery/02-mentor-review.jpg` |
 | `Photos/IMG_9744.HEIC` | Gallery + About page break | `public/images/gallery/03-team-table.jpg` |
 | `Photos/_DSC7439.JPG` | Gallery | `public/images/gallery/04-opening-session.jpg` |
-| `Photos/8FA75E40-…_1_105_c.jpeg` | Gallery | `public/images/gallery/05-organizers.jpg` |
+| `Photos/8FA75E40-…_1_105_c.jpeg` | Gallery | `public/images/gallery/05-challenge-team.jpg` |
 | `Photos/IMG_9745.HEIC` | Gallery | `public/images/gallery/06-judges.jpg` |
 | `Photos/IMG_9763.HEIC` | Gallery | `public/images/gallery/07-award-hardware.jpg` |
 | `Photos/IMG_9777.HEIC` | Gallery | `public/images/gallery/08-award-group.jpg` |
@@ -115,6 +115,8 @@ Everything factual on the site traces to a document in the archive:
 2. **Sponsors and supporters.** The `/hackathon` page deliberately names none of them. The planning document lists OpenVPP, Collide.io, Phoenix Contact, Lovable, Kemabonta Ventures, Grid8 and ASU Venture Devils as confirmed hackathon sponsors, and names APS and BKPK as track challenge providers. **None of this is currently published** — describing an organisation as a sponsor or partner on a public page deserves a second check first. Decide whether to add a supporters line to the hackathon entry.
 
 3. **Winning teams.** The chapter context document names Team Ruby (APS AI for Energy), tll;dr (Collide AI for Energy) and GridSense (Software for Energy) as winners. Not published — worth confirming spellings and that the students are happy to be named.
+
+   Three gallery photographs **do** show winning teams, and their alt text now says so (`08-award-group`, `09-certificate`, `10-award-software`). No team or individual is named. `05-challenge-team` shows the team from one of the challenge-setting companies — identified by the president as Collide.io, and deliberately not named on the site while the sponsor question is open.
 
 4. **Photograph consent.** Every published photograph was taken at a large open event on campus, and several show identifiable faces at close range. This is normal for a student organisation, but the Gallery page carries a takedown note pointing at the contact page. If the chapter has a photo-release policy, this is the place to apply it.
 

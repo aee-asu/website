@@ -124,8 +124,8 @@ export const gallery: GalleryImage[] = [
     height: 2133,
   },
   {
-    src: "/images/gallery/05-organizers.jpg",
-    alt: "Organizers and volunteers stand together in front of the ASU Energy Hackathon banner.",
+    src: "/images/gallery/05-challenge-team.jpg",
+    alt: "A team from one of the companies that set a hackathon challenge, standing together in front of the event banner.",
     event: HACKATHON,
     date: HACKATHON_DATE,
     width: 1024,
@@ -142,7 +142,7 @@ export const gallery: GalleryImage[] = [
   },
   {
     src: "/images/gallery/08-award-group.jpg",
-    alt: "A larger team lines up across the stage holding a certificate during the awards.",
+    alt: "A winning team lines up across the stage holding their certificate during the awards.",
     event: HACKATHON,
     date: HACKATHON_DATE,
     width: 1600,
@@ -150,7 +150,7 @@ export const gallery: GalleryImage[] = [
   },
   {
     src: "/images/gallery/09-certificate.jpg",
-    alt: "Two participants hold up their certificate and pitchfork hands in front of the projection screen.",
+    alt: "Two members of a winning team hold up their certificate and pitchfork hands in front of the projection screen.",
     event: HACKATHON,
     date: HACKATHON_DATE,
     width: 1400,
