@@ -116,7 +116,9 @@ Everything factual on the site traces to a document in the archive:
 
 4. **Photograph consent.** Every published photograph was taken at a large open event on campus, and several show identifiable faces at close range. This is normal for a student organisation, but the Gallery page carries a takedown note pointing at the contact page. If the chapter has a photo-release policy, this is the place to apply it.
 
-5. **Officer photographs.** Degree programs are now published (source: the officers' ASU iSearch directory entries, supplied by the president). Leadership is still typographic — no headshots, because none has been supplied and approved. Add them in `src/data/leadership.ts` when available. Officers' personal ASU email addresses and their unrelated lab/employment titles are deliberately **not** published; the chapter address is the public contact.
+5. **Officer photographs.** Degree programs are published (source: the officers' ASU iSearch directory entries, supplied by the president). Portraits for the president, vice president and advisor were supplied by the president and processed by `scripts/prepare_headshots.py` into square, metadata-free copies under `public/images/officers/`. **The treasurer has no portrait yet** — that row falls back to initials, which is a supported state, not a bug. Officers' personal ASU email addresses and their unrelated lab/employment titles are deliberately **not** published; the chapter address is the public contact.
+
+   Worth confirming: each officer and the advisor is happy with the specific photograph used, since two came from other profiles rather than from the person directly.
 
 6. **Domain.** Resolved — `src/data/site.ts` sets `url: "https://www.aeeasu.com"`, the live address. Canonical URLs, the sitemap and social previews all read from it, and it is baked in at build time, so any future change needs a redeploy.
 

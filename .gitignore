@@ -70,3 +70,8 @@ yarn-error.log*
 
 # Screenshots and phone exports dropped in the project root
 /WhatsApp Image*
+
+# Source headshots and phone exports (processed into public/images/officers/)
+/Tabling*/
+/hithesh-purushothama-*.jpeg
+/1703047682656.jpg

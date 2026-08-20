@@ -5,7 +5,7 @@ import Link from "next/link";
 import { JoinCTA } from "@/components/JoinCTA";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { advisor, officers } from "@/data/leadership";
+import { advisor, officers, type Officer } from "@/data/leadership";
 import { links, site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -41,6 +41,51 @@ const activities = [
     body: "Helping students find labs, faculty and funded programs at ASU — see Research & Resources.",
   },
 ];
+
+/** First and last initial, for anyone who has not supplied a portrait yet. */
+function initialsOf(name: string): string {
+  const words = name.split(" ").filter(Boolean);
+  const first = words[0]?.[0] ?? "";
+  const last = words.length > 1 ? words[words.length - 1][0] : "";
+  return `${first}${last}`;
+}
+
+function OfficerRow({ officer, marker }: { officer: Officer; marker: string }) {
+  return (
+    <div className="rule-t grid gap-4 py-8 md:grid-cols-12 md:items-center">
+      <p className="label text-ash md:col-span-1">{marker}</p>
+
+      <div className="flex items-center gap-5 md:col-span-7">
+        {officer.photo ? (
+          <Image
+            src={officer.photo}
+            alt=""
+            width={320}
+            height={320}
+            sizes="80px"
+            className="h-16 w-16 shrink-0 bg-bone object-cover md:h-[4.5rem] md:w-[4.5rem]"
+          />
+        ) : (
+          <span
+            aria-hidden
+            className="label flex h-16 w-16 shrink-0 items-center justify-center bg-bone text-ash md:h-[4.5rem] md:w-[4.5rem]"
+          >
+            {initialsOf(officer.name)}
+          </span>
+        )}
+
+        <div>
+          <h3 className="display text-[1.875rem] text-ink md:text-[2.25rem]">{officer.name}</h3>
+          {officer.program ? (
+            <p className="mt-1.5 text-sm leading-relaxed text-ash">{officer.program}</p>
+          ) : null}
+        </div>
+      </div>
+
+      <p className="label text-maroon md:col-span-4 md:text-right">{officer.role}</p>
+    </div>
+  );
+}
 
 export default function AboutPage() {
   return (
@@ -197,37 +242,13 @@ export default function AboutPage() {
           {officers.map((officer, index) => (
             <li key={officer.name}>
               <Reveal delay={index * 50}>
-                <div className="rule-t grid gap-3 py-8 md:grid-cols-12 md:items-baseline">
-                  <p className="label text-ash md:col-span-1">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <div className="md:col-span-7">
-                    <h3 className="display text-[1.875rem] text-ink md:text-[2.25rem]">
-                      {officer.name}
-                    </h3>
-                    {officer.program ? (
-                      <p className="mt-2 text-sm leading-relaxed text-ash">{officer.program}</p>
-                    ) : null}
-                  </div>
-                  <p className="label text-maroon md:col-span-4 md:text-right">{officer.role}</p>
-                </div>
+                <OfficerRow officer={officer} marker={String(index + 1).padStart(2, "0")} />
               </Reveal>
             </li>
           ))}
           <li>
             <Reveal delay={officers.length * 50}>
-              <div className="rule-t grid gap-3 py-8 md:grid-cols-12 md:items-baseline">
-                <p className="label text-ash md:col-span-1">—</p>
-                <div className="md:col-span-7">
-                  <h3 className="display text-[1.875rem] text-ink md:text-[2.25rem]">
-                    {advisor.name}
-                  </h3>
-                  {advisor.program ? (
-                    <p className="mt-2 text-sm leading-relaxed text-ash">{advisor.program}</p>
-                  ) : null}
-                </div>
-                <p className="label text-maroon md:col-span-4 md:text-right">{advisor.role}</p>
-              </div>
+              <OfficerRow officer={advisor} marker="—" />
             </Reveal>
           </li>
         </ul>
