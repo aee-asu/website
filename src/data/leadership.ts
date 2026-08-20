@@ -32,6 +32,7 @@ export const officers: Officer[] = [
     name: "Rudra Patel",
     role: "Treasurer",
     program: "Graduate student, Electrical Engineering",
+    photo: "/images/officers/rudra-patel.jpg",
   },
 ];
 
