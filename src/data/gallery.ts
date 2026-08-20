@@ -20,7 +20,19 @@ export type GalleryImage = {
 const HACKATHON = "ASU Energy Hackathon";
 const HACKATHON_DATE = "April 2026";
 
+const TABLING = "Taste of the MU";
+const TABLING_DATE = "August 2026";
+
 export const gallery: GalleryImage[] = [
+  {
+    src: "/images/gallery/17-tabling-table.jpg",
+    alt: "Two officers at the chapter's table during a student organization fair, with flyers, pens and giveaways laid out and a tablet showing the chapter website.",
+    event: TABLING,
+    date: TABLING_DATE,
+    width: 2000,
+    height: 1500,
+    span: "wide",
+  },
   {
     src: "/images/gallery/02-mentor-review.jpg",
     alt: "A mentor leans over a lecture-hall bench to look at a team's laptop while other participants work in the background.",

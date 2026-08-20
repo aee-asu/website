@@ -244,6 +244,11 @@ export default function HomePage() {
                 ) : null}
 
                 <div className="mt-8 flex flex-wrap gap-6">
+                  {feature.href ? (
+                    <Link href={feature.href} className="link-underline text-ink">
+                      About the hackathon
+                    </Link>
+                  ) : null}
                   <Link href="/gallery" className="link-underline text-ink">
                     See the archive
                   </Link>

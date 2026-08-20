@@ -12,10 +12,12 @@ const nextConfig: NextConfig = {
     Routes from the previous aeeasu.com site. Anything already shared, whether
     in a Discord message, an email to a sponsor or a QR code on a printed
     flyer, should land somewhere sensible rather than on a 404.
+
+    /hackathon used to redirect here too. It is a page of its own now, which is
+    what anyone following an old link was looking for in the first place.
   */
   async redirects() {
     return [
-      { source: "/hackathon", destination: "/events", permanent: true },
       { source: "/benchmarking", destination: "/research", permanent: true },
     ];
   },

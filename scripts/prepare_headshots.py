@@ -50,7 +50,7 @@ PORTRAITS = [
     {
         # Cropped in tight: the source is a full-length photo in a garden, and
         # at this size the planting behind him competes with the face.
-        "src": "Tabling 19/WhatsApp Image 2026-08-19 at 23.05.42.jpeg",
+        "src": "_drive_raw/Tabling 19/WhatsApp Image 2026-08-19 at 23.05.42.jpeg",
         "dest": "akash-jay-makhija.jpg",
         "box": (95, 40, 260),
     },

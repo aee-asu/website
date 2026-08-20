@@ -38,6 +38,8 @@ export type ChapterEvent = {
   registrationUrl?: string;
   /** Pulls the event out onto the homepage and the top of the archive. */
   featured?: boolean;
+  /** Set when an event has a page of its own, e.g. the hackathon. */
+  href?: string;
   status: "published" | "draft";
   /** Short factual detail lines shown on featured entries. */
   details?: { label: string; value: string }[];
@@ -55,6 +57,9 @@ export const events: ChapterEvent[] = [
     category: "Community",
     description:
       "Come find our table, meet the officers and ask what the chapter is doing this year. No commitment — turn up and talk.",
+    image: "/images/events/taste-of-the-mu-2026.jpg",
+    imageAlt:
+      "The chapter's table at Taste of the MU, with two officers behind it and chapter giveaways laid out across the front.",
     status: "published",
   },
   {
@@ -158,6 +163,7 @@ export const events: ChapterEvent[] = [
   {
     slug: "asu-energy-hackathon-2026",
     title: "ASU Energy Hackathon",
+    href: "/hackathon",
     date: "2026-04-18",
     endDate: "2026-04-19",
     location: "EDC 117",

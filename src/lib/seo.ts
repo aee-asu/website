@@ -99,7 +99,7 @@ export function organizationSchema() {
  * actually carries are emitted — a guessed end time or a made-up postal address
  * is worse than an absent one, since this is what search engines quote.
  */
-export function eventSchema(event: ChapterEvent) {
+export function eventSchema(event: ChapterEvent, path = "/events") {
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -109,7 +109,7 @@ export function eventSchema(event: ChapterEvent) {
     endDate: event.endDate ?? event.date,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    url: `${site.url}/events`,
+    url: `${site.url}${path}`,
     isAccessibleForFree: true,
     location: {
       "@type": "Place",

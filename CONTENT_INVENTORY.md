@@ -18,7 +18,9 @@ Working copy: `_drive_raw/` — **git-ignored, never committed.** The original z
 | `LOGOs/` | 1 file — an ASU energy faculty/labs list (misfiled; no logos in here) |
 | root | 15 spreadsheets and documents — registrations, judges, sponsors, scoring, budgeting |
 
-**Every photograph in the archive is from 18–19 April 2026** (confirmed from EXIF capture timestamps). All of it is the ASU Energy Hackathon. There is no photography of tabling, the Spring 2026 speaker series, or any other chapter activity.
+**Every photograph in the original archive is from 18–19 April 2026** (confirmed from EXIF capture timestamps). All of it is the ASU Energy Hackathon. There was no photography of tabling, the Spring 2026 speaker series, or any other chapter activity.
+
+A second, much smaller export followed on 19 August 2026 — `_drive_raw/Tabling 19/`, three frames from the chapter's table at Taste of the MU. Two are published: one in the gallery, one on the event itself. They are the first images on the site that are not the hackathon.
 
 Videos (1.5 GB, 85 files) were not used and are not in the repository.
 
@@ -110,7 +112,7 @@ Everything factual on the site traces to a document in the archive:
 
    Every speaker is named. Serhii Kaminsky (SorbiForce), Manas Pathak (Grid8, EarthEn), Wayne Dobberpuhl (Nexus Integrated Solutions) and Tino Rosas were named and pictured by the chapter in its own public posts. Kris Saunders (Power48), Victor Atlasman (WattEV) and Vladimir Abdelnour — the PhD student and then chapter president who led the data-centres session — appear on the president's direct confirmation, since the 11 February graphic gave surnames only and the Instagram caption alone was not taken as consent to a permanent credit.
 
-2. **Sponsors and supporters.** The planning document lists OpenVPP, Collide.io, Phoenix Contact, Lovable, Kemabonta Ventures, Grid8 and ASU Venture Devils as confirmed hackathon sponsors, and names APS and BKPK as track challenge providers. **None of this is currently published** — describing an organisation as a sponsor or partner on a public page deserves a second check first. Decide whether to add a supporters line to the hackathon entry.
+2. **Sponsors and supporters.** The `/hackathon` page deliberately names none of them. The planning document lists OpenVPP, Collide.io, Phoenix Contact, Lovable, Kemabonta Ventures, Grid8 and ASU Venture Devils as confirmed hackathon sponsors, and names APS and BKPK as track challenge providers. **None of this is currently published** — describing an organisation as a sponsor or partner on a public page deserves a second check first. Decide whether to add a supporters line to the hackathon entry.
 
 3. **Winning teams.** The chapter context document names Team Ruby (APS AI for Energy), tll;dr (Collide AI for Energy) and GridSense (Software for Energy) as winners. Not published — worth confirming spellings and that the students are happy to be named.
 

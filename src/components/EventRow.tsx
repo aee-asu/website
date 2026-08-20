@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type { ChapterEvent } from "@/data/events";
 import { formatDate, formatDateStack } from "@/lib/date";
 
@@ -20,7 +22,18 @@ export function EventRow({ event, past = false }: { event: ChapterEvent; past?: 
         </div>
 
         <div className="md:col-span-7">
-          <h3 className="display text-[1.75rem] text-ink md:text-[2rem]">{event.title}</h3>
+          <h3 className="display text-[1.75rem] text-ink md:text-[2rem]">
+            {event.href ? (
+              <Link href={event.href} className="transition-colors hover:text-maroon">
+                {event.title}
+                <span aria-hidden className="ml-3 inline-block text-lg text-ash">
+                  →
+                </span>
+              </Link>
+            ) : (
+              event.title
+            )}
+          </h3>
           <p className="measure mt-3 leading-relaxed text-graphite">{event.description}</p>
 
           <dl className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-graphite">

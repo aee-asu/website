@@ -21,5 +21,8 @@
   { "src": "Photos/8867ec0a-fa67-4d3c-bee6-cc7cfea07ac9.JPG", "dest": "gallery/13-hardware-parts.jpg", "maxWidth": 1200 },
   { "src": "Photos/fe4a9a0c-5717-4bf5-8e46-e74309f5fbbe.JPG", "dest": "gallery/14-solar-prototype.jpg", "maxWidth": 1200 },
   { "src": "Photos/f2385a9c-f7fd-4adf-9e81-353c0b504256.JPG", "dest": "gallery/15-discussion.jpg", "maxWidth": 1800 },
-  { "src": "Photos/151b7101-804e-41c2-91d1-0aae04a3e4cf.jpg", "dest": "gallery/16-huddle.jpg", "maxWidth": 1200 }
+  { "src": "Photos/151b7101-804e-41c2-91d1-0aae04a3e4cf.jpg", "dest": "gallery/16-huddle.jpg", "maxWidth": 1200 },
+
+  { "src": "WhatsApp Image 2026-08-19 at 19.31.24.jpeg", "dest": "gallery/17-tabling-table.jpg", "maxWidth": 2000 },
+  { "src": "WhatsApp Image 2026-08-19 at 19.31.25.jpeg", "dest": "events/taste-of-the-mu-2026.jpg", "maxWidth": 2000 }
 ]
