@@ -7,7 +7,7 @@
   { "src": "Photos/5ef534fc-6adb-4f75-ab14-41c5d073ffde.jpg", "dest": "events/hackathon-2026-demo.jpg", "maxWidth": 1200 },
 
   { "src": "Photos/IMG_9731.HEIC", "dest": "gallery/01-teams-working.jpg", "maxWidth": 1800 },
-  { "src": "Photos/IMG_9738.HEIC", "dest": "gallery/02-mentor-review.jpg", "maxWidth": 2000 },
+  { "src": "Photos/IMG_9738.HEIC", "dest": "gallery/02-judge-review.jpg", "maxWidth": 2000 },
   { "src": "Photos/IMG_9744.HEIC", "dest": "gallery/03-team-table.jpg", "maxWidth": 2000 },
   { "src": "Photos/_DSC7439.JPG", "dest": "gallery/04-opening-session.jpg", "maxWidth": 1800 },
   { "src": "Photos/8FA75E40-9134-49AF-AAE0-E9B69920013B_1_105_c.jpeg", "dest": "gallery/05-challenge-team.jpg", "maxWidth": 1024 },

@@ -174,7 +174,7 @@ export default function JoinPage() {
         <figure>
           <Image
             src="/images/gallery/16-huddle.jpg"
-            alt="Participants and a mentor huddled around a laptop at a chapter event, with a volunteer taking notes beside them."
+            alt="People huddled around a laptop at a chapter event, with someone beside them taking notes."
             width={1200}
             height={1600}
             sizes="100vw"

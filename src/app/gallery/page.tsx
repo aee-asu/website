@@ -10,7 +10,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Gallery",
   description:
-    "A visual archive of AEE at ASU — students, mentors, judges and prototypes from the chapter’s events.",
+    "A visual archive of AEE at ASU — students, judges and prototypes from the chapter’s events.",
   path: "/gallery",
 });
 

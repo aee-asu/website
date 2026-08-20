@@ -146,7 +146,7 @@ export default function HomePage() {
         <figure className="relative">
           <Image
             src="/images/hero/courtyard-lunch.jpg"
-            alt="Looking down into a planted ASU courtyard where students eat lunch around a fountain and picnic tables between hackathon sessions."
+            alt="Looking down into a planted courtyard where students eat around a fountain and picnic tables during the lunch laid on for the 2026 ASU Energy Hackathon."
             width={2400}
             height={1800}
             sizes="100vw"

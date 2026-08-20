@@ -147,8 +147,8 @@ export default function EventsPage() {
       <Reveal>
         <figure>
           <Image
-            src="/images/gallery/02-mentor-review.jpg"
-            alt="A mentor leans over a bench to review a team's work on a laptop while other participants continue working nearby."
+            src="/images/gallery/02-judge-review.jpg"
+            alt="A judge leans over a bench to talk with a team about their work while other participants continue working nearby."
             width={2000}
             height={1500}
             sizes="100vw"

@@ -141,7 +141,7 @@ export default function HackathonPage() {
             <figure>
               <Image
                 src="/images/events/hackathon-2026-demo.jpg"
-                alt="A team demonstrating their prototype on a laptop to a judge during the hackathon."
+                alt="A team demonstrating their prototype on a laptop during the hackathon."
                 width={1200}
                 height={1600}
                 sizes="(min-width: 768px) 50vw, 100vw"
@@ -153,7 +153,7 @@ export default function HackathonPage() {
             <figure>
               <Image
                 src="/images/events/hackathon-2026-awards.jpg"
-                alt="Organizers presenting awards at the front of the room at the end of the hackathon."
+                alt="Awards being presented at the front of the room at the end of the hackathon."
                 width={1800}
                 height={2400}
                 sizes="(min-width: 768px) 50vw, 100vw"

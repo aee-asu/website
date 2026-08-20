@@ -45,7 +45,7 @@ Processing applied to every published image (`scripts/prepare_images.py`):
 | `Photos/IMG_9771.HEIC` | Event archive imagery | `public/images/events/hackathon-2026-awards.jpg` |
 | `Photos/5ef534fc-…jpg` | Event archive imagery | `public/images/events/hackathon-2026-demo.jpg` |
 | `Photos/IMG_9731.HEIC` | Gallery | `public/images/gallery/01-teams-working.jpg` |
-| `Photos/IMG_9738.HEIC` | Gallery + Events page break | `public/images/gallery/02-mentor-review.jpg` |
+| `Photos/IMG_9738.HEIC` | Gallery + Events page break | `public/images/gallery/02-judge-review.jpg` |
 | `Photos/IMG_9744.HEIC` | Gallery + About page break | `public/images/gallery/03-team-table.jpg` |
 | `Photos/_DSC7439.JPG` | Gallery | `public/images/gallery/04-opening-session.jpg` |
 | `Photos/8FA75E40-…_1_105_c.jpeg` | Gallery | `public/images/gallery/05-challenge-team.jpg` |

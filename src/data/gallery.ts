@@ -34,8 +34,8 @@ export const gallery: GalleryImage[] = [
     span: "wide",
   },
   {
-    src: "/images/gallery/02-mentor-review.jpg",
-    alt: "A mentor leans over a lecture-hall bench to look at a team's laptop while other participants work in the background.",
+    src: "/images/gallery/02-judge-review.jpg",
+    alt: "A judge leans over a lecture-hall bench to talk with a team about the work on their laptop while other participants work in the background.",
     event: HACKATHON,
     date: HACKATHON_DATE,
     width: 2000,
@@ -101,7 +101,7 @@ export const gallery: GalleryImage[] = [
   },
   {
     src: "/images/gallery/16-huddle.jpg",
-    alt: "Participants and a mentor huddle over a laptop covered in stickers while a volunteer takes notes.",
+    alt: "People huddle over a laptop covered in stickers while someone beside them takes notes.",
     event: HACKATHON,
     date: HACKATHON_DATE,
     width: 1200,
@@ -117,7 +117,7 @@ export const gallery: GalleryImage[] = [
   },
   {
     src: "/images/gallery/06-judges.jpg",
-    alt: "Four judges stand together beside the hackathon banner before judging begins.",
+    alt: "Four people stand together beside the ASU Energy Hackathon banner.",
     event: HACKATHON,
     date: HACKATHON_DATE,
     width: 1600,
@@ -134,7 +134,7 @@ export const gallery: GalleryImage[] = [
   },
   {
     src: "/images/gallery/07-award-hardware.jpg",
-    alt: "A team receives a certificate on stage from two organizers at the closing awards.",
+    alt: "A team receives their certificate at the front of the room during the closing awards.",
     event: HACKATHON,
     date: HACKATHON_DATE,
     width: 1600,
