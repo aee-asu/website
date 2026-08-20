@@ -72,6 +72,90 @@ export const events: ChapterEvent[] = [
 
   /* ---------------------------------------------------------------- Spring 2026 */
   {
+    slug: "arizona-energy-startups-2026",
+    title: "The Arizona Energy Scene for Startups",
+    date: "2026-02-11",
+    time: "5:00 PM",
+    location: "Engineering Center G, Room 305",
+    campus: "Tempe campus",
+    category: "Industry",
+    description:
+      "Kris Saunders, a partner at Power48 who previously led Extend EV, and Victor Atlasman, Director of Engineering and Product Development at WattEV, on the Arizona energy startup scene — infrastructure, heavy-duty EV charging and megawatt systems.",
+    status: "published",
+  },
+  {
+    slug: "battery-startups-2026",
+    title: "Battery Startups Information Session",
+    date: "2026-02-19",
+    time: "5:00 PM",
+    location: "Durham 107",
+    campus: "Tempe campus",
+    category: "Industry",
+    description:
+      "Serhii Kaminsky, founder of SorbiForce, on opportunities in battery startups, followed by open discussion and Q&A.",
+    status: "published",
+  },
+  {
+    slug: "microgrids-leaps-visit-2026",
+    title: "Microgrids & LEAPS Testbed Visit",
+    date: "2026-02-25",
+    time: "4:00–6:00 PM",
+    location: "LEAPS Lab",
+    campus: "Polytechnic campus",
+    category: "Site Visit",
+    description:
+      "A deep dive into microgrid design followed by a hands-on build and testing session at the LEAPS Lab, run with the IEEE Student Branch at ASU. A free bus ran from Tempe.",
+    status: "published",
+  },
+  {
+    slug: "battery-energy-founders-2026",
+    title: "Battery & Energy Founders and CEOs Discussion",
+    date: "2026-03-04",
+    time: "4:00–6:00 PM",
+    location: "Durham Hall 105",
+    campus: "Tempe campus",
+    category: "Industry",
+    description:
+      "Serhii Kaminsky (founder and CEO, SorbiForce) and Manas Pathak (founder and CEO, Grid8 and EarthEn) on energy innovation, startup leadership and building companies in the industry.",
+    status: "published",
+  },
+  {
+    slug: "energy-efficiency-training-2026",
+    title: "Energy Efficiency Discussion & Hands-on Training",
+    date: "2026-03-18",
+    time: "4:00–6:00 PM",
+    location: "Durham 108",
+    campus: "Tempe campus",
+    category: "Workshop",
+    description:
+      "Wayne Dobberpuhl, Executive Vice President for Energy at Nexus Integrated Solutions, on energy efficiency in practice, with hands-on training. Hosted with the IEEE Student Branch at ASU.",
+    status: "published",
+  },
+  {
+    slug: "data-centers-info-session-2026",
+    title: "Interactive Information Session: Data Centers",
+    date: "2026-03-25",
+    time: "5:00–6:00 PM",
+    location: "Durham Hall 105",
+    campus: "Tempe campus",
+    category: "Technical",
+    description:
+      "An interactive session on data centres and their energy demand, led by Vladimir Abdelnour, a PhD student and the chapter's president at the time.",
+    status: "published",
+  },
+  {
+    slug: "project-life-cycle-2026",
+    title: "Understanding Project Life Cycle",
+    date: "2026-04-16",
+    time: "5:30–6:30 PM",
+    location: "ECG 320",
+    campus: "Tempe campus",
+    category: "Career",
+    description:
+      "Tino Rosas, an energy engineer and project management professional, on how large energy and construction projects get from idea to reality.",
+    status: "published",
+  },
+  {
     slug: "asu-energy-hackathon-2026",
     title: "ASU Energy Hackathon",
     date: "2026-04-18",
@@ -95,64 +179,28 @@ export const events: ChapterEvent[] = [
 ];
 
 /**
- * Sessions from the chapter's Spring 2026 speaker series. They are kept here as
- * drafts because the schedule comes from a planning deck rather than a record of
- * what was held. Confirm a session happened, then switch it to "published" —
- * and add the speaker to the description if you want them credited.
+ * The two Spring 2026 sessions that the chapter's Instagram does not corroborate.
+ * Every other session in the planning deck was confirmed from a post and moved
+ * into `events` above. Confirm one of these happened, fill in the room, time and
+ * speaker, then switch it to "published".
  */
 export const draftEvents: ChapterEvent[] = [
-  {
-    slug: "grid-cybersecurity-2026",
-    title: "Grid Cybersecurity Talk & Training",
-    date: "2026-04-01",
-    location: "Tempe campus",
-    category: "Technical",
-    description: "Session from the chapter's Spring 2026 series.",
-    status: "draft",
-  },
-  {
-    slug: "energy-efficiency-training-2026",
-    title: "Energy Efficiency Hands-on Training",
-    date: "2026-03-18",
-    location: "Tempe campus",
-    category: "Workshop",
-    description: "Session from the chapter's Spring 2026 series.",
-    status: "draft",
-  },
-  {
-    slug: "microgrids-leaps-visit-2026",
-    title: "Microgrids & LEAPS Lab Visit",
-    date: "2026-02-25",
-    location: "Tempe campus",
-    category: "Site Visit",
-    description: "Session from the chapter's Spring 2026 series.",
-    status: "draft",
-  },
-  {
-    slug: "battery-startups-2026",
-    title: "Battery Startups",
-    date: "2026-02-18",
-    location: "Tempe campus",
-    category: "Industry",
-    description: "Session from the chapter's Spring 2026 series.",
-    status: "draft",
-  },
-  {
-    slug: "arizona-energy-startups-2026",
-    title: "The Arizona Energy Scene for Startups",
-    date: "2026-02-11",
-    location: "Tempe campus",
-    category: "Industry",
-    description: "Session from the chapter's Spring 2026 series.",
-    status: "draft",
-  },
   {
     slug: "introduction-session-2026",
     title: "Introduction Session",
     date: "2026-02-04",
     location: "Tempe campus",
     category: "Community",
-    description: "Session from the chapter's Spring 2026 series.",
+    description: "Session from the chapter's Spring 2026 planning deck.",
+    status: "draft",
+  },
+  {
+    slug: "grid-cybersecurity-2026",
+    title: "Grid Cybersecurity Talk & Training",
+    date: "2026-04-01",
+    location: "Tempe campus",
+    category: "Technical",
+    description: "Session from the chapter's Spring 2026 planning deck.",
     status: "draft",
   },
 ];
