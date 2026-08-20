@@ -12,8 +12,11 @@ export const site = {
   /** Short name without the registered mark, for running prose. */
   plainName: "AEE at ASU",
   tagline: "Association of Energy Engineers",
+  /* Used in the footer, the meta description and the social card, so it has to
+     read as prose and carry the words someone would actually search for:
+     the full name of the parent body, the university, and the campus. */
   description:
-    "A student chapter at Arizona State University for people who want to work on real energy problems — power systems, storage, buildings, data centers, materials, markets and policy.",
+    "The Association of Energy Engineers student chapter at Arizona State University — a student organization in Tempe for people who want to work on real energy problems: power systems, storage, buildings, data centers, materials, markets and policy.",
   /** Production address. Feeds canonical URLs, the sitemap and social previews.
    *  Update this the moment a custom domain is added in Vercel. */
   url: "https://www.aeeasu.com",

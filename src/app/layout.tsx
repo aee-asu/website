@@ -31,8 +31,12 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  /* "AEE" at ASU is also the course prefix for Aerospace Engineering, so a
+     title of "AEE at ASU" alone competes with the university's own degree
+     pages and loses. The full name of the parent body is what someone
+     searching for this chapter actually types. */
   title: {
-    default: `${site.shortName} | Association of Energy Engineers`,
+    default: `${site.shortName} | ${site.legalName}`,
     template: `%s | ${site.shortName}`,
   },
   description: site.description,
@@ -40,7 +44,11 @@ export const metadata: Metadata = {
   keywords: [
     "AEE at ASU",
     "Association of Energy Engineers",
+    "Association of Energy Engineers ASU",
+    "AEE student chapter",
     "Arizona State University student chapter",
+    "ASU energy club",
+    "ASU Energy Hackathon",
     "energy engineering",
     "power systems",
     "energy student organization",
@@ -49,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: site.legalName,
-    title: `${site.shortName} | Association of Energy Engineers`,
+    title: `${site.shortName} | ${site.legalName}`,
     description: site.description,
     url: site.url,
     locale: "en_US",
@@ -64,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.shortName} | Association of Energy Engineers`,
+    title: `${site.shortName} | ${site.legalName}`,
     description: site.description,
     images: ["/images/og/og-default.jpg"],
   },
