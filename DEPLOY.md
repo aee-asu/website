@@ -1,6 +1,6 @@
 # Deploying
 
-The repository is set up for the normal path: **GitHub for the source, Vercel for the live site, automatic deploys on push to `main`.** Nothing is deployed yet — this is the checklist for when you are ready.
+The repository is set up for the normal path: **GitHub for the source, Vercel for the live site, automatic deploys on push to `main`.** That is all live: the site is at [www.aeeasu.com](https://www.aeeasu.com) and a push reaches it in about thirty seconds. What follows is the record of how it was set up — read it if you need to move the project, change the domain or hand it to the next officer.
 
 ---
 

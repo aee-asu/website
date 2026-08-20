@@ -2,9 +2,29 @@
 
 The public website for the **Association of Energy Engineers Student Chapter at Arizona State University®**.
 
+**Live at [www.aeeasu.com](https://www.aeeasu.com).** Push to `main` and the site rebuilds itself — about thirty seconds, no further action.
+
 It exists so that a student, a professor, an engineer at a utility or a prospective speaker can land on one page and understand within a minute what the chapter is, what it runs, who leads it and how to get involved.
 
 Built with Next.js (App Router), TypeScript and Tailwind CSS. No database, no CMS, no login. All content lives in plain TypeScript files under `src/data/` that any officer can edit.
+
+---
+
+## If you have just inherited this
+
+You do not need to read the whole file. Find your task:
+
+| I want to… | Go to |
+| --- | --- |
+| Put a new event on the site | [Events](#events--srcdataeventsts) |
+| Add photos from this semester | [Photos](#photos--scriptsselectionjson-then-srcdatagalleryts) |
+| Change who is listed as an officer | [Leadership](#leadership--srcdataleadershipts) |
+| Add a link to the resources pages | [Resources](#resources--srcdataresourcests) |
+| Change the email, socials or navigation | [Chapter details](#chapter-details--srcdatasitets) |
+| Check something is safe to publish | [Before you publish](#before-you-publish) |
+| Understand how any of it works | [How it is put together](#how-it-is-put-together) |
+
+Three things are true of every task above: you edit a text file, you run `npm run build` to confirm nothing broke, and you push. There is no admin panel and nothing to deploy by hand.
 
 ---
 
@@ -93,12 +113,19 @@ Keep the gallery curated. Twelve excellent photographs read far better than eigh
 
 ```ts
 export const officers: Officer[] = [
-  { name: "Hithesh Rai Purushothama", role: "President" },
+  {
+    name: "Akash Jay Makhija",
+    role: "Vice President",
+    program: "Graduate student, Electrical Engineering",  // optional
+    photo: "/images/officers/akash.jpg",                  // optional
+  },
   …
 ];
 ```
 
-`program` and `photo` are both optional and the layout is designed to look right without them. Do not add a headshot unless the person has agreed to it.
+`advisor` is a separate export below the officers and takes the same fields.
+
+`program` and `photo` are both optional and the layout is designed to look right without them. Add a program only from something authoritative — the person's ASU directory entry, not memory. Do not add a headshot unless that person has agreed to it, and use the name they actually go by.
 
 ### Resources — `src/data/resources.ts`
 
@@ -106,7 +133,9 @@ Three lists: `chapterResources` (AEE, careers, learning), `researchResources` (f
 
 ### Chapter details — `src/data/site.ts`
 
-Names, the social and joining links, the contact email and the top navigation. **Update `url` here** when the site gets its permanent address — canonical links, the sitemap and social previews all read from it.
+Names, the social and joining links, the contact email and the top navigation.
+
+`url` is the site's own address, `https://www.aeeasu.com`. Canonical links, `sitemap.xml`, `robots.txt` and the social preview card all read from it, and it is baked in at build time — so if the domain ever changes, change it here and redeploy, or every one of those quietly points at the old address.
 
 ### The six focus areas — `src/data/focusAreas.ts`
 
@@ -136,6 +165,19 @@ Pages are static: every route is pre-rendered at build time, so the site is fast
 - **Type.** Newsreader for display statements, Inter for interface and body, IBM Plex Mono for labels and numbering. Three faces, used consistently.
 - **Motion** is limited to a short fade-and-lift on scroll, and it turns itself off entirely for anyone with reduced-motion enabled.
 - **Accessibility** is part of the design, not a later pass: semantic landmarks, one `<h1>` per page with no skipped levels, visible focus rings, a skip link, a keyboard-operable mobile menu and lightbox, and AA contrast throughout.
+
+---
+
+## Before you publish
+
+Most of this site is ordinary text. Four things are not, and getting them wrong creates a real problem for the chapter rather than an untidy page.
+
+- **The chapter's name.** In public, it is the *Association of Energy Engineers Student Chapter at Arizona State University®*, or *AEE at ASU®* for short. Never "ASU AEE", never "Arizona State AEE", and "at" rather than "@" — the older Instagram graphics use "@", the website does not.
+- **The marks.** Only the approved chapter lockup, never recoloured or redrawn; on dark sections it sits on its own white plate rather than being knocked out to white. No ASU university logo or sunburst anywhere. The site states that it is run by the student organisation and is not an official ASU publication — leave that in.
+- **Naming people.** Guest speakers are named because the chapter promoted them publicly, by name and photograph, with their agreement. Students, judges and competition winners are a higher bar: get their say-so first. When in doubt, publish the event and leave the name out — an unnamed session is still a useful record.
+- **Naming organisations.** Do not call anyone a sponsor, partner or collaborator until someone has checked it. A planning document listing intended sponsors is not the same as a confirmed one, and the difference matters to the organisation being named.
+
+Where a claim on the site came from is recorded in [`CONTENT_INVENTORY.md`](./CONTENT_INVENTORY.md), along with the questions still open. Read it before changing anything factual, and add to it when you publish something new.
 
 ---
 
