@@ -59,7 +59,7 @@ export const events: ChapterEvent[] = [
       "Come find our table, meet the officers and ask what the chapter is doing this year. No commitment — turn up and talk.",
     image: "/images/events/taste-of-the-mu-2026.jpg",
     imageAlt:
-      "The chapter's table at Taste of the MU, with two officers behind it and chapter giveaways laid out across the front.",
+      "The chapter's table at Taste of the MU, with three officers behind it and chapter giveaways laid out across the front.",
     status: "published",
   },
   {

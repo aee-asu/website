@@ -26,7 +26,7 @@ const TABLING_DATE = "August 2026";
 export const gallery: GalleryImage[] = [
   {
     src: "/images/gallery/17-tabling-table.jpg",
-    alt: "Two officers at the chapter's table during a student organization fair, with flyers, pens and giveaways laid out and a tablet showing the chapter website.",
+    alt: "Three chapter officers at their table during a student organization fair, two standing and one seated, with flyers, pens and giveaways laid out and a tablet showing the chapter website.",
     event: TABLING,
     date: TABLING_DATE,
     width: 2000,
