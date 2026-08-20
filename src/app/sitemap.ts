@@ -9,6 +9,7 @@ const routes = [
   { path: "/research", priority: 0.8 },
   { path: "/gallery", priority: 0.6 },
   { path: "/join", priority: 0.9 },
+  { path: "/partner", priority: 0.8 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -140,6 +141,13 @@ export default function JoinPage() {
                 <p>
                   If you have something specific in mind, email is the fastest route. Otherwise
                   the social links below all reach the officers.
+                </p>
+                <p>
+                  Enquiring on behalf of a company, a lab or a startup?{" "}
+                  <Link href="/partner" className="link-underline text-ink">
+                    Partner with us
+                  </Link>{" "}
+                  sets out what working together can look like.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4">

@@ -21,6 +21,7 @@ You do not need to read the whole file. Find your task:
 | Change who is listed as an officer | [Leadership](#leadership--srcdataleadershipts) |
 | Add a link to the resources pages | [Resources](#resources--srcdataresourcests) |
 | Change the email, socials or navigation | [Chapter details](#chapter-details--srcdatasitets) |
+| Change what sponsors and collaborators see | `src/app/partner/page.tsx` |
 | Check something is safe to publish | [Before you publish](#before-you-publish) |
 | Understand how any of it works | [How it is put together](#how-it-is-put-together) |
 
