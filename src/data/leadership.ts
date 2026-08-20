@@ -12,12 +12,25 @@ export type Officer = {
 };
 
 export const officers: Officer[] = [
-  { name: "Hithesh Rai Purushothama", role: "President" },
-  { name: "Akash Jay Makhija", role: "Vice President" },
-  { name: "Rudra Patel", role: "Treasurer" },
+  {
+    name: "Hithesh Rai Purushothama",
+    role: "President",
+    program: "Graduate student, Artificial Intelligence Engineering (Materials Science and Engineering)",
+  },
+  {
+    name: "Akash Jay Makhija",
+    role: "Vice President",
+    program: "Graduate student, Electrical Engineering",
+  },
+  {
+    name: "Rudra Patel",
+    role: "Treasurer",
+    program: "Graduate student, Electrical Engineering",
+  },
 ];
 
 export const advisor: Officer = {
-  name: "Prof. Nicholas Rolston",
+  name: "Nick Rolston",
   role: "Faculty Advisor",
+  program: "Assistant Professor, School of Electrical, Computer and Energy Engineering",
 };
