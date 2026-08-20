@@ -6,13 +6,14 @@ import { ResourceList } from "@/components/ResourceList";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { chapterResources, howToStart, researchResources } from "@/data/resources";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Research & Resources",
   description:
     "How to find energy research, faculty and funded programs at ASU — plus AEE membership, careers and energy learning resources.",
-  alternates: { canonical: "/research" },
-};
+  path: "/research",
+});
 
 export default function ResearchPage() {
   return (

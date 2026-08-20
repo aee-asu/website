@@ -3,18 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { EventRow } from "@/components/EventRow";
+import { JsonLd } from "@/components/JsonLd";
 import { JoinCTA } from "@/components/JoinCTA";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { links } from "@/data/site";
 import { pastEvents, upcomingEvents } from "@/lib/events";
+import { eventSchema, pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Events",
   description:
     "Upcoming sessions, workshops, site visits and competitions from AEE at ASU — and an archive of what the chapter has already run.",
-  alternates: { canonical: "/events" },
-};
+  path: "/events",
+});
 
 /**
  * Upcoming and past are worked out from today's date at render time, so a
@@ -29,6 +31,10 @@ export default function EventsPage() {
 
   return (
     <>
+      {[...upcoming, ...past].map((event) => (
+        <JsonLd key={event.slug} data={eventSchema(event)} />
+      ))}
+
       <section className="shell pb-14 pt-16 md:pb-20 md:pt-24">
         <Reveal>
           <p className="label text-maroon">Events</p>

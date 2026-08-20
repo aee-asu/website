@@ -5,13 +5,14 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { links } from "@/data/site";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Join",
   description:
     "Join the Association of Energy Engineers Student Chapter at Arizona State University — on Sun Devil Central, Discord and Instagram.",
-  alternates: { canonical: "/join" },
-};
+  path: "/join",
+});
 
 const community = [
   {

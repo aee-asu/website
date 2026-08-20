@@ -5,13 +5,14 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { links, site } from "@/data/site";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Partner with us",
   description:
     "How companies, labs, utilities, startups and ASU alumni can work with the Association of Energy Engineers Student Chapter at Arizona State University — speaking, mentoring, hosting a visit, setting a challenge or supporting an event.",
-  alternates: { canonical: "/partner" },
-};
+  path: "/partner",
+});
 
 /** Prefilled so a first email already carries what we need to reply properly. */
 const mailto = `mailto:${links.email}?subject=${encodeURIComponent(

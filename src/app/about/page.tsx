@@ -7,13 +7,14 @@ import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { advisor, officers, type Officer } from "@/data/leadership";
 import { links, site } from "@/data/site";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About",
   description:
     "What the Association of Energy Engineers is, what the ASU student chapter does, and who can take part.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 const activities = [
   {

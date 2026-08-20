@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, Inter, Newsreader } from "next/font/google";
 
+import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { site } from "@/data/site";
+import { organizationSchema, websiteSchema } from "@/lib/seo";
 import "@/styles/globals.css";
 
 const inter = Inter({
@@ -80,6 +82,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${inter.variable} ${newsreader.variable} ${plexMono.variable}`}
     >
       <body className="min-h-screen bg-paper antialiased">
+        <JsonLd data={organizationSchema()} />
+        <JsonLd data={websiteSchema()} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-6 focus:top-6 focus:z-[70] focus:bg-ink focus:px-5 focus:py-3 focus:text-paper"

@@ -5,13 +5,14 @@ import { GalleryGrid } from "@/components/GalleryGrid";
 import { JoinCTA } from "@/components/JoinCTA";
 import { Reveal } from "@/components/Reveal";
 import { gallery } from "@/data/gallery";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Gallery",
   description:
     "A visual archive of AEE at ASU — students, mentors, judges and prototypes from the chapter’s events.",
-  alternates: { canonical: "/gallery" },
-};
+  path: "/gallery",
+});
 
 export default function GalleryPage() {
   return (
