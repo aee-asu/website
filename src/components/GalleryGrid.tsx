@@ -96,6 +96,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
               onClick={() => setOpenIndex(index)}
               className="group block w-full text-left"
             >
+              <span className="sr-only">View larger: </span>
               <span className="block overflow-hidden bg-bone">
                 <Image
                   src={image.src}
@@ -125,14 +126,19 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
           ref={dialogRef}
           role="dialog"
           aria-modal="true"
-          aria-label={current.alt}
+          aria-label="Gallery image viewer"
           className="on-dark fixed inset-0 z-[60] flex flex-col bg-ink/97"
         >
           <div className="shell flex shrink-0 items-center justify-between py-5">
-            <p className="label text-mist">
-              {String((openIndex ?? 0) + 1).padStart(2, "0")}
-              <span className="mx-2 text-ash">/</span>
-              {String(images.length).padStart(2, "0")}
+            <p className="label text-mist" aria-live="polite" aria-atomic="true">
+              <span aria-hidden>
+                {String((openIndex ?? 0) + 1).padStart(2, "0")}
+                <span className="mx-2 text-ash">/</span>
+                {String(images.length).padStart(2, "0")}
+              </span>
+              <span className="sr-only">
+                Image {(openIndex ?? 0) + 1} of {images.length}. {current.alt}
+              </span>
             </p>
             <button
               ref={closeRef}
@@ -147,7 +153,9 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
           <div className="flex min-h-0 flex-1 items-center justify-center px-4 pb-4">
             <Image
               src={current.src}
-              alt={current.alt}
+              /* Empty on purpose: the caption below is visible text and carries
+                 the same description, so a non-empty alt would repeat it. */
+              alt=""
               width={current.width}
               height={current.height}
               sizes="100vw"
