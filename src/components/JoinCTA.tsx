@@ -7,22 +7,22 @@ const channels = [
   {
     href: links.join,
     label: "Sun Devil Central",
-    note: "Officially join the student organization. This is the one that counts.",
+    note: "Officially join the club. This is the one that actually counts.",
   },
   {
     href: links.discord,
     label: "Discord",
-    note: "Where the day-to-day conversation happens — questions, project talk, event chatter.",
+    note: "Where we talk between events. Questions, project stuff, event chatter.",
   },
   {
     href: links.instagram,
     label: "Instagram",
-    note: "Public updates, event posts and photos from what we have been doing.",
+    note: "Event posts and photos. Follow if you just want to keep an eye on us.",
   },
   {
     href: links.linkedin,
     label: "LinkedIn",
-    note: "The professional side — worth following if you are job-hunting or want to stay in touch after graduating.",
+    note: "The professional side. Worth following if you're job-hunting or want to stay in touch after you graduate.",
   },
 ];
 
@@ -33,12 +33,12 @@ export function JoinCTA() {
         <Reveal>
           <p className="label text-gold">Join</p>
           <h2 className="display mt-8 max-w-[18ch] text-[clamp(2.25rem,6vw,4.5rem)]">
-            You do not need an energy background. You need to be interested.
+            You don&rsquo;t need an energy background. Just be interested.
           </h2>
           <p className="measure mt-8 text-lg leading-relaxed text-mist">
-            Undergraduates, graduate students and PhD students from any major are welcome —
-            engineering, sustainability, business, computing, science, policy. Show up to one
-            thing and see whether it is for you.
+            Undergrad, master&rsquo;s, PhD, any major &mdash; engineering, sustainability,
+            business, computing, science, policy. Show up to one thing and see if it&rsquo;s for
+            you.
           </p>
         </Reveal>
 

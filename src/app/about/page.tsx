@@ -19,15 +19,15 @@ export const metadata: Metadata = pageMeta({
 const activities = [
   {
     title: "Technical workshops",
-    body: "Hands-on sessions on the things energy work actually requires — auditing, measurement, modelling, tooling.",
+    body: "Hands-on sessions on what energy work actually involves: auditing, measurement, modeling, tooling.",
   },
   {
     title: "Speakers and panels",
-    body: "Engineers, founders and researchers talking about work they are doing now, with time for real questions.",
+    body: "Engineers, founders and researchers talking about what they're working on now, with time for actual questions.",
   },
   {
     title: "Site and lab visits",
-    body: "Going to see the systems and the labs rather than only reading about them.",
+    body: "Going to see the systems and the labs instead of just reading about them.",
   },
   {
     title: "Competitions and projects",
@@ -39,7 +39,7 @@ const activities = [
   },
   {
     title: "Research pathways",
-    body: "Helping students find labs, faculty and funded programs at ASU — see Research & Resources.",
+    body: "Help finding labs, faculty and funded programs at ASU. See Research & Resources.",
   },
 ];
 
@@ -119,18 +119,19 @@ export default function AboutPage() {
             <div className="measure mt-6 space-y-5 text-[1.0625rem] leading-relaxed text-graphite md:text-lg">
               <p>
                 The Association of Energy Engineers is a professional body founded in 1977, with
-                more than 20,000 members across over 100 countries. It is best known for its
-                certifications — the Certified Energy Manager and Certified Energy Auditor among
-                them — and for chapters that bring working energy professionals together locally.
+                members in more than 100 countries. It&rsquo;s best known for its certifications
+                &mdash; it has certified over 33,000 professionals since 1981, the Certified Energy
+                Manager and Certified Energy Auditor among them &mdash; and for local chapters that
+                bring working energy professionals together.
               </p>
               <p>
                 Its members are electrical, mechanical, chemical, industrial and nuclear engineers,
-                along with economists and analysts. If IEEE is the professional home for
-                electrical engineering, AEE is the equivalent for energy.
+                plus economists and analysts. IEEE is the professional home for electrical
+                engineering; AEE is roughly that for energy.
               </p>
               <p>
-                Arizona has its own professional AEE chapter, which is a useful thing to know
-                about while you are still a student.
+                Arizona has its own professional AEE chapter, which is worth knowing about while
+                you&rsquo;re still a student.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-6">
@@ -158,22 +159,21 @@ export default function AboutPage() {
               </h2>
               <div className="measure mt-6 space-y-5 text-[1.0625rem] leading-relaxed text-graphite md:text-lg">
                 <p>
-                  The chapter&rsquo;s purpose is to build a student-facing energy community at ASU
-                  that connects students with energy industry professionals, technical learning,
-                  career opportunities, competitions, hackathons, workshops and professional
-                  development.
+                  We&rsquo;re here to build an energy community at ASU that actually connects
+                  students to the industry &mdash; through technical sessions, career help,
+                  competitions, hackathons and workshops.
                 </p>
                 <p>
-                  It started with a large first year — a flagship hackathon, a speaker series and
-                  a set of industry relationships — and is now being rebuilt around a broader
-                  definition of energy than efficiency alone. Power and grid, renewables and
-                  storage, buildings, data centers, materials and manufacturing, markets and
-                  policy: the chapter should be a place where a first-year undergraduate and a
-                  fourth-year PhD student can both find something worth their evening.
+                  The first semester was a big one: a hackathon, a speaker series and a set of
+                  industry relationships. We&rsquo;re now widening the scope beyond efficiency
+                  alone, to power and grid, renewables and storage, buildings, data centers,
+                  materials and manufacturing, markets and policy. A first-year undergrad and a
+                  fourth-year PhD student should both be able to find something here worth their
+                  evening.
                 </p>
                 <p>
-                  We are not trying to be the largest club on campus. We are trying to be the one
-                  where the energy conversation at ASU actually happens.
+                  We&rsquo;re not trying to be the biggest club on campus, just the place where
+                  the energy conversation at ASU actually happens.
                 </p>
               </div>
             </Reveal>
@@ -187,7 +187,7 @@ export default function AboutPage() {
           number="03"
           eyebrow="Programming"
           title="What we run"
-          intro="Formats vary by semester and by who is willing to come talk to us. These are the constants."
+          intro="What we run shifts each semester depending on who&rsquo;s willing to come talk to us. These are the things that stay constant."
         />
 
         <ul className="mt-14 grid gap-x-10 md:grid-cols-2 lg:grid-cols-3">
@@ -214,14 +214,13 @@ export default function AboutPage() {
             </h2>
             <div className="measure mt-6 space-y-5 text-[1.0625rem] leading-relaxed text-graphite md:text-lg">
               <p>
-                Membership is open to any enrolled ASU student, undergraduate or graduate, in any
-                major. There are no dues. You do not need prior energy coursework — a lot of the
-                most useful people in the room come from computing, business, policy and the
-                sciences.
+                Open to any enrolled ASU student, undergrad or grad, in any major. No dues. You
+                don&rsquo;t need to have taken an energy course &mdash; plenty of the most useful
+                people in the room come from computing, business, policy and the sciences.
               </p>
               <p>
-                ASU alumni, faculty, staff and industry professionals can take part as
-                non-voting associate members: speaking, mentoring, judging and advising.
+                ASU alumni, faculty, staff and industry people can take part as non-voting
+                associate members &mdash; speaking, mentoring, judging and advising.
               </p>
             </div>
             <Link
@@ -256,9 +255,8 @@ export default function AboutPage() {
 
         <Reveal className="rule-t mt-6 pt-6">
           <p className="measure text-sm leading-relaxed text-ash">
-            Officer positions turn over each year. If you want one, the way in is to show up,
-            take on something small and do it well — that is how everyone currently listed got
-            here.
+            Officer positions turn over every year. If you want one, show up, take on something
+            small and do it well. That&rsquo;s how everyone listed above got here.
           </p>
         </Reveal>
       </section>

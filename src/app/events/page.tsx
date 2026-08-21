@@ -44,8 +44,8 @@ export default function EventsPage() {
         </Reveal>
         <Reveal delay={80}>
           <p className="measure mt-10 text-lg leading-relaxed text-graphite md:text-xl">
-            Everything is open to any ASU student. You do not need to be a member first, and you
-            do not need to know anything about energy to turn up.
+            Everything is open to any ASU student. You don&rsquo;t have to be a member first, and
+            you don&rsquo;t need to know anything about energy to show up.
           </p>
         </Reveal>
       </section>
@@ -67,8 +67,8 @@ export default function EventsPage() {
         ) : (
           <Reveal className="rule-t mt-12 py-12">
             <p className="measure text-lg leading-relaxed text-graphite">
-              Between semesters, or between confirmations. Discord is where the next date gets
-              announced first — usually a week or two before it lands here.
+              We&rsquo;re either between semesters or still confirming things. The next date
+              always goes up in Discord first, usually a week or two before it lands here.
             </p>
             <div className="mt-8 flex flex-wrap gap-6">
               <a href={links.discord} className="link-underline text-ink">
@@ -124,9 +124,9 @@ export default function EventsPage() {
               Want to speak, host a visit, or run a session?
             </h2>
             <p className="measure mt-6 text-[1.0625rem] leading-relaxed text-graphite md:text-lg">
-              We are actively looking for engineers, researchers and founders willing to spend an
-              hour with students, and for teams willing to host a site or lab visit. Students with
-              a workshop they want to teach are equally welcome — that is often the best session of
+              We&rsquo;re looking for engineers, researchers and founders willing to spend an hour
+              with students, and for teams who&rsquo;d host a site or lab visit. Students who want
+              to teach a workshop are just as welcome &mdash; those are often the best sessions of
               the semester.
             </p>
             <div className="mt-8 flex flex-wrap gap-6">

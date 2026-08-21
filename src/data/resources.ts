@@ -41,7 +41,7 @@ export const chapterResources: ResourceGroup[] = [
       {
         title: "AEE Arizona Chapter",
         href: "https://www.aeecenter.org/listing/arizona-chapter/",
-        note: "The professional chapter in our state — worth knowing while you are still a student.",
+        note: "The professional chapter in our state. Worth knowing about while you're still a student.",
       },
       {
         title: "AEE Foundation Scholarships",
@@ -83,7 +83,7 @@ export const researchResources: ResourceGroup[] = [
   {
     id: "find-research",
     title: "Find research",
-    intro: "Start here if you do not yet know which lab you want.",
+    intro: "Start here if you don't know which lab you want yet.",
     links: [
       {
         title: "ASU UResearch",
@@ -186,7 +186,7 @@ export const howToStart = [
   {
     step: "03",
     title: "Read their research pages and one recent paper",
-    body: "You do not need to understand all of it. You need to be able to say what it is about.",
+    body: "You don't need to understand all of it. You just need to be able to say what it's about.",
   },
   {
     step: "04",

@@ -19,19 +19,19 @@ const community = [
     href: links.discord,
     label: "Discord",
     role: "The community",
-    body: "Where the conversation happens between events — questions, project talk, links people find, and the first place a new date gets posted.",
+    body: "Where we talk between events. Questions, project stuff, links people find, and the first place a new date gets posted.",
   },
   {
     href: links.instagram,
     label: "Instagram",
     role: "Public updates",
-    body: "Event announcements and photos. Follow this if you want to keep an eye on the chapter without committing to anything.",
+    body: "Event announcements and photos. Follow this if you want to keep an eye on us without committing to anything.",
   },
   {
     href: links.linkedin,
     label: "LinkedIn",
     role: "The professional side",
-    body: "Chapter updates aimed at industry, and the easiest way to stay connected to the chapter once you graduate.",
+    body: "Chapter updates aimed at industry, and the easiest way to stay in touch once you graduate.",
   },
 ];
 
@@ -42,13 +42,13 @@ export default function JoinPage() {
         <Reveal>
           <p className="label text-maroon">Join</p>
           <h1 className="display mt-10 max-w-[15ch] text-[clamp(2.5rem,7.5vw,6rem)] text-ink">
-            One link, and you are in.
+            Joining takes a minute.
           </h1>
         </Reveal>
         <Reveal delay={80}>
           <p className="measure mt-10 text-lg leading-relaxed text-graphite md:text-xl">
-            Open to every enrolled ASU student, undergraduate or graduate, in any major. No dues,
-            no application, no prior energy coursework.
+            Open to every enrolled ASU student, undergrad or grad, in any major. No dues, no
+            application, and no energy coursework required.
           </p>
         </Reveal>
       </section>
@@ -60,15 +60,15 @@ export default function JoinPage() {
             href={links.join}
             className="group block bg-ink px-7 py-12 text-paper transition-colors hover:bg-maroon md:px-14 md:py-16"
           >
-            <span className="label text-gold">Step one — the only required one</span>
+            <span className="label text-gold">Step one, and the only one that&rsquo;s required</span>
             <span className="display mt-6 block text-[clamp(2rem,5.5vw,4rem)]">
               Join on Sun Devil Central
             </span>
             <span className="mt-6 flex flex-wrap items-baseline justify-between gap-4">
               <span className="max-w-[52ch] leading-relaxed text-mist">
                 This is ASU&rsquo;s official student organization system. Adding yourself to the
-                roster is what makes you a member of the chapter — it takes about a minute and
-                uses your ASURITE login.
+                roster is what actually makes you a member. It takes about a minute and uses your
+                ASURITE login.
               </span>
               <span
                 aria-hidden
@@ -89,9 +89,8 @@ export default function JoinPage() {
           title="Join the community"
           intro={
             <p>
-              The roster makes you a member. These are where being a member is actually worth
-              something — you can join any of them without joining the chapter first, but do the
-              roster anyway.
+              The roster makes it official. These are where it actually starts being useful. You
+              can join any of them without doing the roster first, but do the roster anyway.
             </p>
           }
         />
@@ -131,20 +130,20 @@ export default function JoinPage() {
             </Reveal>
             <Reveal delay={60} className="md:col-span-8">
               <h2 className="display text-[clamp(1.75rem,4vw,2.75rem)] text-ink">
-                Not a student? Still useful.
+                Not a student?
               </h2>
               <div className="measure mt-6 space-y-5 text-[1.0625rem] leading-relaxed text-graphite md:text-lg">
                 <p>
                   Engineers, researchers, founders, recruiters and ASU alumni are welcome as
-                  non-voting associate members — speaking, mentoring, judging, hosting a site
-                  visit or supporting an event.
+                  non-voting associate members &mdash; speaking, mentoring, judging, hosting a site
+                  visit or helping with an event.
                 </p>
                 <p>
-                  If you have something specific in mind, email is the fastest route. Otherwise
-                  the social links below all reach the officers.
+                  If you have something specific in mind, email is fastest. The social links
+                  below all reach the officers too.
                 </p>
                 <p>
-                  Enquiring on behalf of a company, a lab or a startup?{" "}
+                  Asking on behalf of a company, a lab or a startup?{" "}
                   <Link href="/partner" className="link-underline text-ink">
                     Partner with us
                   </Link>{" "}

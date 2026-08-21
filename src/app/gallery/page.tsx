@@ -26,9 +26,9 @@ export default function GalleryPage() {
         </Reveal>
         <Reveal delay={80}>
           <p className="measure mt-10 text-lg leading-relaxed text-graphite md:text-xl">
-            A selected archive rather than every photo we have. Right now it is almost entirely
-            the 2026 ASU Energy Hackathon, because that is where the chapter&rsquo;s first year
-            ended up. It will grow.
+            A selection, not every photo we have. Right now it&rsquo;s almost all the 2026 ASU
+            Energy Hackathon, because that&rsquo;s where our first semester ended up. It&rsquo;ll
+            grow.
           </p>
         </Reveal>
       </section>

@@ -56,7 +56,7 @@ export const events: ChapterEvent[] = [
     campus: "Tempe campus",
     category: "Community",
     description:
-      "Come find our table, meet the officers and ask what the chapter is doing this year. No commitment — turn up and talk.",
+      "Come find our table, meet the officers and ask what we're doing this year. No commitment, just come talk to us.",
     image: "/images/events/taste-of-the-mu-2026.jpg",
     imageAlt:
       "The chapter's table at Taste of the MU, with three officers behind it and chapter giveaways laid out across the front.",
@@ -71,7 +71,7 @@ export const events: ChapterEvent[] = [
     campus: "Tempe campus",
     category: "Community",
     description:
-      "The big fall org fair. We will be there the whole time — a good first stop if you are new to ASU and want in on the energy side of campus.",
+      "The big fall org fair. We'll be there the whole time, so it's an easy first stop if you're new to ASU and want in on the energy side of campus.",
     status: "published",
   },
 
@@ -171,7 +171,7 @@ export const events: ChapterEvent[] = [
     category: "Competition",
     featured: true,
     description:
-      "A 24-hour, prototype-first energy hackathon hosted by the chapter, run across four tracks with industry challenge statements, mentors on the floor and judging on Sunday morning.",
+      "Our 24-hour energy hackathon. Four tracks, real challenge statements from industry, mentors on the floor overnight, and judging Sunday morning.",
     image: "/images/events/hackathon-2026-group.jpg",
     imageAlt:
       "Participants, organizers and judges of the 2026 ASU Energy Hackathon standing together at the front of the lecture hall after the awards.",

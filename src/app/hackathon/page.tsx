@@ -22,7 +22,7 @@ const DEVPOST = "https://asu-energy-hackathon.devpost.com";
 const tracks = [
   {
     name: "AI for Energy",
-    body: "Forecasting, optimisation and decision support — anywhere a model can do something a spreadsheet cannot.",
+    body: "Forecasting, optimization and decision support. Anywhere a model can do something a spreadsheet can't.",
   },
   {
     name: "Software for Energy",
@@ -30,11 +30,11 @@ const tracks = [
   },
   {
     name: "Hardware for Energy",
-    body: "Something you can put on a table. Sensing, power electronics, storage, a working rig.",
+    body: "Something you can put on a table. Sensing, power electronics, storage, a rig that runs.",
   },
   {
     name: "Energy Efficiency",
-    body: "Buildings and industry — auditing, retrofits, controls, and the unglamorous savings that add up.",
+    body: "Buildings and industry: auditing, retrofits, controls, and the boring savings that add up.",
   },
 ];
 
@@ -64,9 +64,9 @@ export default function HackathonPage() {
         <Reveal delay={80}>
           <p className="measure mt-10 text-lg leading-relaxed text-graphite md:text-xl">
             Twenty-four hours, four tracks, and real challenge statements from people working in
-            the industry. Students from any major build something that works, then defend it in
-            front of judges on Sunday morning. The chapter ran the first one in April 2026 with
-            the IEEE, ASME and Robotics student organizations.
+            the industry. Students from any major build something that works, then defend it to
+            judges on Sunday morning. We ran the first one in April 2026 with the IEEE, ASME and
+            Robotics student organizations.
           </p>
         </Reveal>
       </section>
@@ -110,9 +110,9 @@ export default function HackathonPage() {
             title="Four ways in"
             intro={
               <p>
-                Teams declare a track and work against a challenge statement written by someone
-                who deals with that problem for a living. You do not need to arrive with a team or
-                an idea.
+                Teams pick a track and work against a challenge statement written by someone who
+                deals with that problem for a living. You don&rsquo;t need to show up with a team
+                or an idea.
               </p>
             }
           />
@@ -190,8 +190,8 @@ export default function HackathonPage() {
                 <Link href="/events" className="link-underline text-ink">
                   events page
                 </Link>{" "}
-                and to the chapter Discord first. Any major, any year — the strongest teams in 2026
-                were the mixed ones.
+                and into the chapter Discord first. Any major, any year &mdash; the strongest
+                teams in 2026 were the mixed ones.
               </p>
             </Reveal>
 

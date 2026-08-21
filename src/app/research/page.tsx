@@ -27,9 +27,10 @@ export default function ResearchPage() {
         </Reveal>
         <Reveal delay={80}>
           <p className="measure mt-10 text-lg leading-relaxed text-graphite md:text-xl">
-            Two things students ask us constantly: how do I get into a lab, and where do I actually
-            look for energy work. Neither answer is secret — it is just scattered across a dozen
-            university pages. Here it is collected, with the useful ones marked.
+            Two questions we get constantly: how do I get into a lab, and where do I look for
+            energy work. Neither answer is a secret, it&rsquo;s just spread across a dozen
+            different university pages. So we collected it here and marked the ones worth your
+            time.
           </p>
         </Reveal>
 
@@ -56,10 +57,10 @@ export default function ResearchPage() {
           title="Finding a lab"
           intro={
             <p>
-              ASU runs a large energy research operation — grid and power systems, photovoltaics,
-              batteries and storage, power electronics, energy materials, fuel cells. The
-              directories below are how you find the people doing it, and the programs below fund
-              students to join them.
+              There&rsquo;s a lot of energy research at ASU: grid and power systems,
+              photovoltaics, batteries and storage, power electronics, energy materials, fuel
+              cells. The directories below are how you find the people doing it, and the programs
+              under them are what pays students to help.
             </p>
           }
         />
@@ -77,7 +78,7 @@ export default function ResearchPage() {
           <Reveal>
             <p className="label text-gold">02 / How to start</p>
             <h2 className="display mt-8 max-w-[20ch] text-[clamp(2rem,5vw,3.5rem)]">
-              Five steps, in the order that actually works.
+              Five steps, in the order we&rsquo;d actually do them.
             </h2>
           </Reveal>
 
@@ -99,8 +100,8 @@ export default function ResearchPage() {
 
           <Reveal className="rule-t mt-6 pt-6">
             <p className="measure text-sm leading-relaxed text-ash">
-              If you get stuck on step four, bring the draft to a chapter event or post it in
-              Discord. Someone has sent that email before.
+              Stuck on step four? Bring the draft to an event or drop it in Discord. Somebody
+               there has sent that email before.
             </p>
           </Reveal>
         </div>
@@ -114,8 +115,8 @@ export default function ResearchPage() {
           title="Beyond the university"
           intro={
             <p>
-              Membership in the chapter is separate from membership in AEE itself — both are worth
-              having, and the student rate for the national organization is low.
+              Joining the chapter and joining AEE itself are two different things. Both are worth
+              doing, and the student rate for the national organization is cheap.
             </p>
           }
         />
@@ -132,7 +133,7 @@ export default function ResearchPage() {
             <Link href="/join" className="link-underline text-graphite">
               Tell us
             </Link>{" "}
-            and we will fix it.
+            and we&rsquo;ll fix it.
           </p>
         </Reveal>
       </section>
