@@ -6,12 +6,35 @@ import { JoinCTA } from "@/components/JoinCTA";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { focusAreas } from "@/data/focusAreas";
+import { arizonaStats, nationalStats, type Stat } from "@/data/landscape";
 import { links, site } from "@/data/site";
 import { featuredEvent, upcomingEvents } from "@/lib/events";
 import { formatDate } from "@/lib/date";
 
 /** Same reason as the events page: the upcoming list is date-dependent. */
 export const revalidate = 3600;
+
+/** One sourced figure. The source line is not optional — see data/landscape.ts. */
+function StatRow({ stat }: { stat: Stat }) {
+  return (
+    <div className="rule-t grid gap-4 py-8 md:grid-cols-12 md:gap-8 md:py-10">
+      <p className="display flex items-baseline gap-2 text-[clamp(2.5rem,6vw,3.75rem)] leading-none text-ink md:col-span-4">
+        {stat.value}
+        {stat.unit ? <span className="text-[0.45em] text-maroon">{stat.unit}</span> : null}
+      </p>
+      <div className="md:col-span-8">
+        <p className="max-w-[52ch] leading-relaxed text-graphite">{stat.body}</p>
+        <p className="label mt-4 text-ash">
+          <a href={stat.sourceUrl} className="link-underline">
+            {stat.source} ↗
+          </a>
+          <span className="mx-2">·</span>
+          {stat.asOf}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function HomePage() {
   const upcoming = upcomingEvents().slice(0, 3);
@@ -27,18 +50,19 @@ export default function HomePage() {
 
         <Reveal delay={60}>
           <h1 className="display mt-10 text-[clamp(2.75rem,8.5vw,7.5rem)] text-ink">
-            Energy is changing.
+            We&rsquo;re the energy club
             <br />
-            <span className="text-maroon">Come understand what comes next.</span>
+            <span className="text-maroon">at ASU.</span>
           </h1>
         </Reveal>
 
         <div className="mt-12 grid gap-10 md:grid-cols-12 md:items-end">
           <Reveal delay={120} className="md:col-span-7">
             <p className="measure text-lg leading-relaxed text-graphite md:text-xl">
-              We are the student chapter of the Association of Energy Engineers at ASU. We run
-              workshops, speaker sessions, site visits and competitions for students who want to
-              understand how energy systems actually work — and work on them.
+              Officially: the ASU student chapter of the Association of Energy Engineers. In
+              practice we bring in people who work in energy, run workshops, get out to see real
+              sites, and throw a hackathon in the spring. Any major, no dues. Come to one thing
+              and see if it&rsquo;s for you.
             </p>
           </Reveal>
 
@@ -85,20 +109,20 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={60} className="md:col-span-8">
             <p className="display text-[clamp(1.6rem,3.4vw,2.5rem)] leading-[1.24] text-ink">
-              Energy is not one discipline. It is power systems and buildings and batteries and
-              chemistry and software and money and policy, all at once.
+              Energy isn&rsquo;t one major. It&rsquo;s power systems, buildings, batteries,
+              chemistry, software, markets and policy, and most of the interesting problems sit
+              where those overlap.
             </p>
             <div className="measure mt-8 space-y-5 text-[1.0625rem] leading-relaxed text-graphite md:text-lg">
               <p>
-                AEE at ASU brings together students from engineering, sustainability, business,
-                computing, science and policy around that reality. The chapter exists to close the
-                gap between what you learn in a course and what the people running Arizona&rsquo;s
-                energy systems deal with on a Tuesday.
+                So our members come from engineering, sustainability, business, computing, science
+                and policy. You learn plenty in class about how energy is supposed to work. This
+                is where you find out what people in the industry are dealing with right now.
               </p>
               <p>
-                In practice that means technical workshops, speakers from industry and research,
-                lab and site visits, competitions, and the kind of introductions that are hard to
-                make on your own.
+                That looks like workshops, speakers from industry and from ASU labs, site and lab
+                visits, competitions, and meeting people you&rsquo;d have a hard time emailing
+                cold.
               </p>
             </div>
             <Link href="/about" className="link-underline mt-8 inline-block text-ink">
@@ -112,11 +136,11 @@ export default function HomePage() {
       <section className="shell pb-20 md:pb-32">
         <SectionHeading
           number="02"
-          eyebrow="What we explore"
+          eyebrow="What we cover"
           title={
             <>
-              Six areas the chapter
-              <br className="hidden md:block" /> programs around.
+              Six areas we keep
+              <br className="hidden md:block" /> coming back to.
             </>
           }
         />
@@ -141,6 +165,54 @@ export default function HomePage() {
         </ul>
       </section>
 
+      {/* ------------------------------------------------------ The landscape */}
+      <section className="bg-bone">
+        <div className="shell py-20 md:py-32">
+          <SectionHeading
+            number="03"
+            eyebrow="Why now"
+            title="The numbers moving underneath all of this"
+            intro={
+              <p>
+                We put this here because it&rsquo;s the honest reason the chapter exists. Arizona
+                is one of the places where the next decade of the grid gets decided, and it is
+                happening while you&rsquo;re in school. Every figure below is sourced and dated
+                &mdash; click through and check us.
+              </p>
+            }
+          />
+
+          <p className="label mt-16 text-maroon">Arizona</p>
+          <ul className="mt-6">
+            {arizonaStats.map((stat, index) => (
+              <li key={stat.value + stat.source}>
+                <Reveal delay={(index % 2) * 60}>
+                  <StatRow stat={stat} />
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+
+          <p className="label mt-16 text-maroon">And beyond</p>
+          <ul className="mt-6">
+            {nationalStats.map((stat, index) => (
+              <li key={stat.value + stat.source}>
+                <Reveal delay={(index % 2) * 60}>
+                  <StatRow stat={stat} />
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+
+          <Reveal className="rule-t mt-10 pt-6">
+            <p className="measure text-sm leading-relaxed text-ash">
+              Figures are as published on the dates shown. They move quickly, and we re-check them
+              each semester. If you spot one that has gone stale, tell us and we&rsquo;ll fix it.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ------------------------------------------------- Full-bleed break */}
       <Reveal>
         <figure className="relative">
@@ -161,7 +233,7 @@ export default function HomePage() {
       {/* ----------------------------------------------- What's happening */}
       <section className="shell py-20 md:py-32">
         <SectionHeading
-          number="03"
+          number="04"
           eyebrow="What's happening"
           title="Coming up"
           aside={
@@ -180,8 +252,8 @@ export default function HomePage() {
         ) : (
           <div className="rule-t mt-14 py-12">
             <p className="measure text-lg leading-relaxed text-graphite">
-              Nothing on the calendar this minute. The fastest way to hear about the next session
-              is Discord, or the chapter roster on Sun Devil Central.
+              Nothing on the calendar right now. Discord is the fastest way to hear about the next
+              one, or add yourself to the roster on Sun Devil Central.
             </p>
             <div className="mt-6 flex flex-wrap gap-6">
               <a href={links.discord} className="link-underline text-ink">
@@ -200,9 +272,9 @@ export default function HomePage() {
         <section className="bg-bone">
           <div className="shell py-20 md:py-32">
             <SectionHeading
-              number="04"
+              number="05"
               eyebrow="From the chapter"
-              title="The chapter’s flagship event, so far"
+              title="The biggest thing we’ve done so far"
             />
 
             <div className="mt-14 grid gap-10 md:grid-cols-12 md:gap-12">
@@ -250,7 +322,7 @@ export default function HomePage() {
                     </Link>
                   ) : null}
                   <Link href="/gallery" className="link-underline text-ink">
-                    See the archive
+                    See the photos
                   </Link>
                   <Link href="/events" className="link-underline text-ink">
                     Past events
@@ -266,23 +338,21 @@ export default function HomePage() {
       <section className="shell py-20 md:py-32">
         <div className="grid gap-10 md:grid-cols-12">
           <Reveal className="md:col-span-6">
-            <p className="label text-maroon">05 / Research</p>
+            <p className="label text-maroon">06 / Research</p>
             <h2 className="display mt-8 text-[clamp(2rem,5vw,3.25rem)] text-ink">
-              ASU runs one of the largest energy research operations in the country.
+              There&rsquo;s a lot of energy research at ASU. Most students never find it.
             </h2>
           </Reveal>
 
           <Reveal delay={80} className="md:col-span-6 md:col-start-7">
             <div className="measure space-y-5 text-[1.0625rem] leading-relaxed text-graphite md:text-lg">
               <p>
-                Grid and power systems, solar and photovoltaics, batteries and storage, power
-                electronics, energy materials — most of it within a short walk of each other on
-                the Tempe campus.
+                Grid and power systems, solar, batteries and storage, power electronics, energy
+                materials. Most of it is within a short walk on the Tempe campus.
               </p>
               <p>
-                Most students never find it, because nobody explains where to look or how to
-                write the email. We put the directories, the funded programs and the actual first
-                steps in one place.
+                Nobody really explains where to look or how to write the email, so we put the
+                directories, the funded programs and the first steps in one place.
               </p>
             </div>
             <Link
