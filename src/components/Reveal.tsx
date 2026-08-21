@@ -47,7 +47,13 @@ export function Reveal({ children, delay = 0, as, className = "", id }: RevealPr
           }
         }
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+      /*
+        Positive bottom margin extends the root box below the fold, so an
+        element begins revealing before the reader reaches it. threshold 0
+        means any sliver counts. Together these stop the reveal from being
+        something you wait for.
+      */
+      { rootMargin: "0px 0px 25% 0px", threshold: 0 },
     );
 
     observer.observe(node);

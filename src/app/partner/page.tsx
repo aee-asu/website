@@ -219,16 +219,22 @@ export default function PartnerPage() {
         </Reveal>
       </section>
 
-      <Reveal>
-        <figure>
-          <Image
-            src="/images/gallery/15-discussion.jpg"
-            alt="Students seated around a shared table mid-discussion, papers and a laptop between them."
-            width={1800}
-            height={2400}
-            sizes="100vw"
-            className="h-[46vh] w-full object-cover object-center md:h-[62vh]"
-          />
+      <Reveal className="shell pb-20 md:pb-28">
+        <figure className="md:grid md:grid-cols-12">
+          <div className="md:col-span-5 lg:col-span-4 md:col-start-8 lg:col-start-9">
+            <Image
+              src="/images/gallery/15-discussion.jpg"
+              alt="Students seated around a shared table mid-discussion, papers and a laptop between them."
+              width={1800}
+              height={2400}
+              sizes="(min-width: 1024px) 32vw, (min-width: 768px) 40vw, 100vw"
+              className="w-full bg-bone"
+            />
+            <figcaption className="label mt-4 flex flex-wrap justify-between gap-4 text-ash">
+              <span>ASU Energy Hackathon</span>
+              <span>April 2026</span>
+            </figcaption>
+          </div>
         </figure>
       </Reveal>
     </>

@@ -169,16 +169,22 @@ export default function JoinPage() {
         </div>
       </section>
 
-      <Reveal>
-        <figure>
-          <Image
-            src="/images/gallery/16-huddle.jpg"
-            alt="People huddled around a laptop at a chapter event, with someone beside them taking notes."
-            width={1200}
-            height={1600}
-            sizes="100vw"
-            className="h-[46vh] w-full object-cover object-center md:h-[62vh]"
-          />
+      <Reveal className="shell pb-20 md:pb-28">
+        <figure className="md:grid md:grid-cols-12">
+          <div className="md:col-span-5 lg:col-span-4">
+            <Image
+              src="/images/gallery/16-huddle.jpg"
+              alt="People huddle over a laptop covered in stickers while someone beside them takes notes."
+              width={1200}
+              height={1600}
+              sizes="(min-width: 1024px) 32vw, (min-width: 768px) 40vw, 100vw"
+              className="w-full bg-bone"
+            />
+            <figcaption className="label mt-4 flex flex-wrap justify-between gap-4 text-ash">
+              <span>ASU Energy Hackathon</span>
+              <span>April 2026</span>
+            </figcaption>
+          </div>
         </figure>
       </Reveal>
     </>
