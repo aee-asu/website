@@ -21,7 +21,8 @@ export const site = {
    *  Update this the moment a custom domain is added in Vercel. */
   url: "https://www.aeeasu.com",
   campus: "Tempe, Arizona",
-  founded: "2026",
+  /** ISO 8601. The chapter was founded in February 2026; first sessions ran that spring. */
+  founded: "2026-02",
 } as const;
 
 export const links = {
