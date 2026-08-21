@@ -145,7 +145,7 @@ export const events: ChapterEvent[] = [
     campus: "Tempe campus",
     category: "Technical",
     description:
-      "An interactive session on data centres and their energy demand, led by Vladimir Abdelnour, a PhD student and the chapter's president at the time.",
+      "An interactive session on data centers and their energy demand, led by Vladimir Abdelnour, a PhD student and the chapter's president at the time.",
     status: "published",
   },
   {
