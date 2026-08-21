@@ -179,7 +179,7 @@ export const events: ChapterEvent[] = [
     details: [
       { label: "Format", value: "24 hours, prototype-first" },
       { label: "Tracks", value: "AI, Software, Hardware, Efficiency" },
-      { label: "With", value: "IEEE, ASME and Robotics at ASU" },
+      { label: "With", value: "The IEEE student branch at ASU" },
     ],
   },
 ];
