@@ -149,7 +149,9 @@ export const events: ChapterEvent[] = [
   {
     slug: "aee-ieee-hkn-town-hall-2026",
     title: "AEE × IEEE-HKN Town Hall & Mixer",
-    pendingDetails: ["RSVP link", "Arrival instructions", "Audience and capacity"],
+    registrationUrl: "https://sundevilcentral.eoss.asu.edu/hkn/rsvp_boot?id=407681",
+    registrationNote: "Free. RSVP through IEEE-HKN on Sun Devil Central.",
+    pendingDetails: ["Arrival instructions", "Audience and capacity"],
     date: "2026-10-08",
     time: "5:00–6:30 PM",
     location: "GWC 487",
