@@ -23,7 +23,61 @@ const HACKATHON_DATE = "April 2026";
 const TABLING = "Taste of the MU";
 const TABLING_DATE = "August 2026";
 
+const SOLAR_FAB = "ASU AEP Solar Fab Tour";
+const APPLIED_MATERIALS = "Applied Materials Industry Session";
+const SEPTEMBER = "September 2026";
+
 export const gallery: GalleryImage[] = [
+  {
+    src: "/images/gallery/23-applied-materials-audience.jpg",
+    alt: "Students seated on benches and lounge chairs listen to a speaker standing beside a screen at the far end of an open room.",
+    event: APPLIED_MATERIALS,
+    date: SEPTEMBER,
+    width: 2000,
+    height: 1500,
+    span: "wide",
+  },
+  {
+    src: "/images/gallery/22-applied-materials-talk.jpg",
+    alt: "A speaker stands beside a screen showing a slide titled 'Environmental sustainability for semiconductor facilities'.",
+    event: APPLIED_MATERIALS,
+    date: SEPTEMBER,
+    width: 1600,
+    height: 2133,
+  },
+  {
+    src: "/images/gallery/19-solar-fab-sample.jpg",
+    alt: "Students in cleanroom gowns and gloves gather close to pass around and look at thin grey sample sheets.",
+    event: SOLAR_FAB,
+    date: SEPTEMBER,
+    width: 1600,
+    height: 1200,
+  },
+  {
+    src: "/images/gallery/18-solar-fab-group.jpg",
+    alt: "A group of students in yellow cleanroom gowns, hair covers and face masks, some kneeling in front, inside a fabrication facility.",
+    event: SOLAR_FAB,
+    date: SEPTEMBER,
+    width: 2000,
+    height: 1500,
+    span: "wide",
+  },
+  {
+    src: "/images/gallery/20-solar-fab-cleanroom.jpg",
+    alt: "A long cleanroom bay under amber lighting, lined with process equipment, shelving and a cart.",
+    event: SOLAR_FAB,
+    date: SEPTEMBER,
+    width: 1600,
+    height: 2133,
+  },
+  {
+    src: "/images/gallery/21-solar-fab-briefing.jpg",
+    alt: "Students stand in a white corridor outside the cleanroom, gathered around two people who are talking with them.",
+    event: SOLAR_FAB,
+    date: SEPTEMBER,
+    width: 1800,
+    height: 1350,
+  },
   {
     src: "/images/gallery/17-tabling-table.jpg",
     alt: "Three chapter officers at their table during a student organization fair, two standing and one seated, with flyers, pens and giveaways laid out and a tablet showing the chapter website.",

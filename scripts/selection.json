@@ -24,5 +24,15 @@
   { "src": "Photos/151b7101-804e-41c2-91d1-0aae04a3e4cf.jpg", "dest": "gallery/16-huddle.jpg", "maxWidth": 1200 },
 
   { "src": "WhatsApp Image 2026-08-19 at 19.31.24.jpeg", "dest": "gallery/17-tabling-table.jpg", "maxWidth": 2000 },
-  { "src": "WhatsApp Image 2026-08-19 at 19.31.25.jpeg", "dest": "events/taste-of-the-mu-2026.jpg", "maxWidth": 2000 }
+  { "src": "WhatsApp Image 2026-08-19 at 19.31.25.jpeg", "dest": "events/taste-of-the-mu-2026.jpg", "maxWidth": 2000 },
+
+  { "src": "AEE Solar Fab tour/Image (94).jpg", "dest": "events/solar-fab-tour-2026.jpg", "maxWidth": 1800 },
+  { "src": "AEE X AMAT Talk/Photo Sep 19 2026, 11 55 22.jpg", "dest": "events/applied-materials-2026.jpg", "maxWidth": 1800 },
+
+  { "src": "AEE Solar Fab tour/Image (93).jpg", "dest": "gallery/18-solar-fab-group.jpg", "maxWidth": 2000 },
+  { "src": "AEE Solar Fab tour/good_1.heic", "dest": "gallery/19-solar-fab-sample.jpg", "maxWidth": 1600 },
+  { "src": "AEE Solar Fab tour/good_3.heic", "dest": "gallery/20-solar-fab-cleanroom.jpg", "maxWidth": 1600 },
+  { "src": "AEE Solar Fab tour/good_4.JPG", "dest": "gallery/21-solar-fab-briefing.jpg", "maxWidth": 1800 },
+  { "src": "AEE X AMAT Talk/Photo Sep 19 2026, 11 13 13.jpg", "dest": "gallery/22-applied-materials-talk.jpg", "maxWidth": 1600 },
+  { "src": "AEE X AMAT Talk/Photo Sep 19 2026, 11 13 03.jpg", "dest": "gallery/23-applied-materials-audience.jpg", "maxWidth": 2000 }
 ]

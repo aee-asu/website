@@ -61,6 +61,19 @@ Processing applied to every published image (`scripts/prepare_images.py`):
 | `Photos/f2385a9c-…JPG` | Gallery | `public/images/gallery/15-discussion.jpg` |
 | `Photos/151b7101-…jpg` | Gallery + Join page break | `public/images/gallery/16-huddle.jpg` |
 
+Fall 2026 events, from two zips supplied by the president (`AEE Solar Fab tour.zip`, 111 photos, and `AEE X AMAT Talk.zip`, 10 photos), unpacked to `_drive_raw/Fall 2026 Events/`. The four `good_*` files in the Solar Fab zip were already marked as picks.
+
+| Source file | Website use | Destination |
+| --- | --- | --- |
+| `AEE Solar Fab tour/Image (94).jpg` | Event image | `public/images/events/solar-fab-tour-2026.jpg` |
+| `AEE X AMAT Talk/Photo Sep 19 2026, 11 55 22.jpg` | Event image | `public/images/events/applied-materials-2026.jpg` |
+| `AEE Solar Fab tour/Image (93).jpg` | Gallery | `public/images/gallery/18-solar-fab-group.jpg` |
+| `AEE Solar Fab tour/good_1.heic` | Gallery | `public/images/gallery/19-solar-fab-sample.jpg` |
+| `AEE Solar Fab tour/good_3.heic` | Gallery | `public/images/gallery/20-solar-fab-cleanroom.jpg` |
+| `AEE Solar Fab tour/good_4.JPG` | Gallery | `public/images/gallery/21-solar-fab-briefing.jpg` |
+| `AEE X AMAT Talk/Photo Sep 19 2026, 11 13 13.jpg` | Gallery | `public/images/gallery/22-applied-materials-talk.jpg` |
+| `AEE X AMAT Talk/Photo Sep 19 2026, 11 13 03.jpg` | Gallery | `public/images/gallery/23-applied-materials-audience.jpg` |
+
 The full mapping is machine-readable in `scripts/selection.json`.
 
 ### Deliberately excluded

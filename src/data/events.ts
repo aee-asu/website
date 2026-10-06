@@ -74,6 +74,58 @@ export const events: ChapterEvent[] = [
       "The big fall org fair. We'll be there the whole time, so it's an easy first stop if you're new to ASU and want in on the energy side of campus.",
     status: "published",
   },
+  {
+    slug: "asu-aep-solar-fab-tour-2026",
+    title: "ASU AEP Solar Fab Tour",
+    date: "2026-09-11",
+    time: "3:00–5:00 PM",
+    location: "MTW Building, ASU",
+    category: "Site Visit",
+    description:
+      "A behind-the-scenes tour of the ASU AEP Solar Fab led by Wardia Debray, Process Engineer, following how photovoltaic devices move through fabrication and the materials and processes behind solar technology.",
+    image: "/images/events/solar-fab-tour-2026.jpg",
+    imageAlt:
+      "Students in yellow cleanroom gowns, hair covers and face masks posing as a group inside a fabrication facility.",
+    status: "published",
+  },
+  {
+    slug: "applied-materials-industry-session-2026",
+    title: "Applied Materials Industry Session",
+    date: "2026-09-19",
+    time: "11:00 AM–12:30 PM",
+    location: "Creative Commons 202",
+    category: "Industry",
+    description:
+      "Rony Mathews of Applied Materials on semiconductor manufacturing, industry trends and careers in advanced technology, followed by questions from students.",
+    image: "/images/events/applied-materials-2026.jpg",
+    imageAlt:
+      "A speaker presents next to a large screen while students listen from chairs and benches in an open, modern room.",
+    status: "published",
+  },
+  {
+    slug: "aee-ieee-hkn-town-hall-2026",
+    title: "AEE × IEEE-HKN Town Hall & Mixer",
+    date: "2026-10-08",
+    time: "5:00–6:30 PM",
+    location: "GWC 487",
+    campus: "Tempe campus",
+    category: "Community",
+    description:
+      "A town hall and mixer held jointly with IEEE-HKN. Come meet members of both organizations.",
+    status: "published",
+  },
+  {
+    slug: "leaps-microgrids-workshop-2026",
+    title: "LEAPS Microgrids Workshop",
+    date: "2026-10-21",
+    time: "10:00 AM–1:00 PM",
+    location: "LEAPS Lab",
+    campus: "Polytechnic campus",
+    category: "Workshop",
+    description:
+      "A microgrids workshop at the LEAPS Lab on the Polytechnic campus.",
+    status: "published",
+  },
 
   /* ---------------------------------------------------------------- Spring 2026 */
   {
