@@ -76,3 +76,6 @@ yarn-error.log*
 /hithesh-purushothama-*.jpeg
 /1703047682656.jpg
 /Rdura.png
+
+# Agent session memory (handoffs and status notes). Local only; this repo is public.
+/memory/
