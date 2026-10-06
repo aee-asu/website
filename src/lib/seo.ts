@@ -108,7 +108,9 @@ export function eventSchema(event: ChapterEvent, path = "/events") {
     startDate: event.date,
     endDate: event.endDate ?? event.date,
     eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventAttendanceMode: event.attendanceMode === "hybrid"
+      ? "https://schema.org/MixedEventAttendanceMode"
+      : "https://schema.org/OfflineEventAttendanceMode",
     url: `${site.url}${event.href ?? `${path}#${event.slug}`}`,
     location: {
       "@type": "Place",

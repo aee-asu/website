@@ -30,6 +30,7 @@ export type ChapterEvent = {
   time?: string;
   location: string;
   campus?: string;
+  attendanceMode?: "in-person" | "hybrid";
   category: EventCategory;
   /** One or two sentences. Plain language, no marketing. */
   description: string;
@@ -160,15 +161,39 @@ export const events: ChapterEvent[] = [
   },
   {
     slug: "leaps-microgrids-workshop-2026",
-    title: "LEAPS Microgrids Workshop",
-    pendingDetails: ["RSVP link", "Exact building, room and meeting point", "Parking or transportation", "What to bring", "Audience and capacity", "Workshop learning goals"],
+    title: "AEE × LEAPS Microgrid Workshop",
+    registrationUrl: "https://cglink.me/22J/r415366",
+    registrationNote: "Free. RSVP through Sun Devil Central.",
+    pendingDetails: ["Arrival instructions", "Parking or transportation", "What to bring"],
     date: "2026-10-21",
     time: "10:00 AM–1:00 PM",
-    location: "LEAPS Lab",
+    location: "Santa Catalina Hall (SANCA), room 359",
     campus: "Polytechnic campus",
+    attendanceMode: "in-person",
+    host: "AEE × ASU LEAPS",
+    audience: "ASU undergraduate and graduate students interested in energy, power systems, sustainability and emerging grid technologies.",
     category: "Workshop",
     description:
-      "A microgrids workshop at the LEAPS Lab on the Polytechnic campus.",
+      "A hands-on workshop connecting classroom concepts with the design and operation of modern microgrids.",
+    learningObjectives: ["Microgrids, energy storage and islanding", "Controls and technologies for managing distributed energy systems"],
+    status: "published",
+  },
+  {
+    slug: "aee-siemens-info-session-2026",
+    title: "AEE × Siemens Info Session",
+    date: "2026-10-26",
+    time: "6:00–7:00 PM",
+    location: "WCPH 190",
+    campus: "Tempe campus",
+    attendanceMode: "hybrid",
+    organization: "Siemens",
+    category: "Industry",
+    description: "Siemens industry professionals discuss power protection relays and modern power systems, followed by career and internship information and student questions.",
+    learningObjectives: ["How protection relays protect equipment and support system reliability", "Developments in power system monitoring, protection and automation", "Career paths, internships and skills valued in the industry"],
+    audience: "Undergraduate and graduate students.",
+    registrationUrl: "https://cglink.me/22J/r415810",
+    registrationNote: "Free. RSVP through Sun Devil Central.",
+    pendingDetails: ["Remote attendance instructions"],
     status: "published",
   },
 

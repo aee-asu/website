@@ -18,6 +18,7 @@ export function EventMetadata({ event, upcoming = false }: { event: ChapterEvent
     {upcoming && <div><dt>Time</dt><dd>{event.time ? `${event.time} · Arizona time` : "Time to be announced"}</dd></div>}
     <div><dt>Location</dt><dd>{event.location}{event.campus ? ` · ${event.campus}` : ""}</dd></div>
     {event.host && <div><dt>Host</dt><dd>{event.host}</dd></div>}
+    {event.attendanceMode && <div><dt>Format</dt><dd>{event.attendanceMode === "hybrid" ? "Hybrid" : "In person"}</dd></div>}
     {event.speaker && <div><dt>Speaker</dt><dd>{event.speaker}</dd></div>}
     {event.organization && event.organization !== event.host && <div><dt>With</dt><dd>{event.organization}</dd></div>}
   </dl>;
