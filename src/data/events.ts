@@ -28,6 +28,8 @@ export type ChapterEvent = {
   endDate?: string;
   /** Free text, e.g. "5:00–8:00 PM". Omit if times are not settled. */
   time?: string;
+  /** Confirmed ISO timestamps with explicit UTC offset; omit if either time is unknown. */
+  calendar?: { start: string; end: string };
   location: string;
   campus?: string;
   attendanceMode?: "in-person" | "hybrid";
@@ -148,6 +150,7 @@ export const events: ChapterEvent[] = [
   },
   {
     slug: "aee-ieee-hkn-town-hall-2026",
+    calendar: { start: "2026-10-08T17:00:00-07:00", end: "2026-10-08T18:30:00-07:00" },
     title: "AEE × IEEE-HKN Town Hall & Mixer",
     registrationUrl: "https://sundevilcentral.eoss.asu.edu/hkn/rsvp_boot?id=407681",
     registrationNote: "Free. RSVP through IEEE-HKN on Sun Devil Central.",
@@ -163,6 +166,7 @@ export const events: ChapterEvent[] = [
   },
   {
     slug: "leaps-microgrids-workshop-2026",
+    calendar: { start: "2026-10-21T10:00:00-07:00", end: "2026-10-21T13:00:00-07:00" },
     title: "AEE × LEAPS Microgrid Workshop",
     registrationUrl: "https://cglink.me/22J/r415366",
     registrationNote: "Free. RSVP through Sun Devil Central.",
@@ -182,6 +186,7 @@ export const events: ChapterEvent[] = [
   },
   {
     slug: "aee-siemens-info-session-2026",
+    calendar: { start: "2026-10-26T18:00:00-07:00", end: "2026-10-26T19:00:00-07:00" },
     title: "AEE × Siemens Info Session",
     date: "2026-10-26",
     time: "6:00–7:00 PM",

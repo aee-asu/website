@@ -13,12 +13,32 @@ function load(path) {
   }).outputText;
   const compiled = {exports:{}};
   new Function('require','module','exports',source)(
-    id => id === '../data/events' ? load('../src/data/events.ts') : require(id), compiled, compiled.exports,
+    id => id === '../data/events' ? load('../src/data/events.ts') : id === '../data/site' ? load('../src/data/site.ts') : require(id), compiled, compiled.exports,
   );
   cache.set(path,compiled.exports);
   return compiled.exports;
 }
 const {events} = load('../src/data/events.ts');
+const {googleCalendarUrl} = load('../src/lib/calendar.ts');
+const calendarEvents = events.filter(event => event.calendar);
+const expectedDates = ['20261009T000000Z/20261009T013000Z', '20261021T170000Z/20261021T200000Z', '20261027T010000Z/20261027T020000Z'];
+calendarEvents.forEach((event, index) => {
+  const url = new URL(googleCalendarUrl(event));
+  assert.equal(url.origin, 'https://calendar.google.com');
+  assert.equal(url.searchParams.get('dates'), expectedDates[index]);
+  assert.equal(url.searchParams.get('stz'), 'America/Phoenix');
+  assert.equal(url.searchParams.get('etz'), 'America/Phoenix');
+  assert.equal(url.searchParams.get('text'), event.title);
+  assert.ok(url.searchParams.get('details').includes(event.registrationUrl));
+  assert.ok(url.searchParams.get('location').includes(event.location));
+});
+const calendarExample = calendarEvents[0];
+assert.equal(googleCalendarUrl({...calendarExample, calendar:undefined}), undefined);
+assert.equal(googleCalendarUrl({...calendarExample, status:'draft'}), undefined);
+for (const calendar of [{start:'invalid',end:'invalid'}, {start:'2026-10-08T17:00:00',end:'2026-10-08T18:00:00'}, {start:calendarExample.calendar.end,end:calendarExample.calendar.start}]) {
+  assert.equal(googleCalendarUrl({...calendarExample, calendar}), undefined);
+}
+assert.equal(new URL(googleCalendarUrl({...calendarExample, title:'A&B + PV / 储能'})).searchParams.get('text'), 'A&B + PV / 储能');
 const {isPastEvent,upcomingEvents,pastEvents,featuredEvent} = load('../src/lib/events.ts');
 const single = events.find(e=>e.slug==='aee-ieee-hkn-town-hall-2026');
 const multi = events.find(e=>e.endDate);
