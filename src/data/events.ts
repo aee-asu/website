@@ -88,6 +88,11 @@ export const events: ChapterEvent[] = [
   },
   {
     slug: "student-organizations-open-house-2026",
+    image: "/images/events/open-house-2026.jpg",
+    imageWidth: 2268,
+    imageHeight: 4032,
+    imageCaption: "At the AEE table during the Student Organizations Open House on August 24, 2026.",
+    imageAlt: "Two people stand beside the AEE table with chapter giveaways during an indoor student organization fair.",
     title: "Student Organizations Open House",
     date: "2026-08-24",
     time: "11:00 AM–2:00 PM",

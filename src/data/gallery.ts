@@ -29,6 +29,14 @@ const SEPTEMBER = "September 2026";
 
 export const gallery: GalleryImage[] = [
   {
+    src: "/images/events/open-house-2026.jpg",
+    alt: "Two people stand beside the AEE table with chapter giveaways at an indoor student organization fair.",
+    event: "Student Organizations Open House",
+    date: "August 24, 2026",
+    width: 2268,
+    height: 4032,
+  },
+  {
     src: "/images/gallery/23-applied-materials-audience.jpg",
     alt: "Students seated on benches and lounge chairs listen to a speaker standing beside a screen at the far end of an open room.",
     event: APPLIED_MATERIALS,

@@ -1,5 +1,11 @@
 # Content inventory
 
+## Research update — 6 October 2026
+
+Expanded Recent work from four to twelve entries and checked each against its official ASU article before publication. Exact sources, article dates, supported claims, funding eligibility/deadlines and qualifications: `docs/research-sources-2026-10-06.md`. Corrected the ACES demonstration attribution from PSERC to LEAPS. Announcements remain identified as planned work; site-specific results are not generalized. Added verified FURI, MORE and ASU–TSMC opportunities and ITAC details.
+
+The user supplied `PXL_20260824_181436123.jpg` and identified it as the August24 Open House. Published copy: `public/images/events/open-house-2026.jpg`, reused in event record and gallery,2268×4032. Original has no EXIF; copied without cropping or altering the photograph. Next.js handles responsive image delivery. No people identified by name.
+
 ## Launch-readiness content — 6 October 2026
 
 Added a Solar Fab Field Note using the existing event record and three existing chapter photographs. Specific source mapping and limits are in `docs/launch-readiness-2026-10-06.md`. Its three observations are bounded to the recorded fabrication theme and visible samples, equipment and attire; no new process identification, numerical claim, quote or attendee testimony was added. Deeper technical takeaways await organizer input.

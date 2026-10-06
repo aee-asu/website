@@ -11,11 +11,15 @@ import {
   chapterResources,
   emailTemplate,
   energyAtASU,
+  fundingOpportunities,
   howToStart,
   recentWork,
   researchResources,
 } from "@/data/resources";
 import { pageMeta } from "@/lib/seo";
+import { links } from "@/data/site";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = pageMeta({
   title: "Research & Resources",
@@ -25,6 +29,7 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function ResearchPage() {
+  const fundingDeadlinePassed = new Date() >= new Date("2026-10-15T00:00:00-07:00");
   return (
     <>
       <section className="shell pb-14 pt-16 md:pb-20 md:pt-24">
@@ -43,6 +48,7 @@ export default function ResearchPage() {
 
         <Reveal delay={120}>
           <nav aria-label="On this page" className="rule-t mt-12 flex flex-wrap gap-x-8 gap-y-3 pt-6">
+            <a href="#funding-deadlines" className="link-underline label text-maroon">Research funding</a>
             <a href="#by-area" className="link-underline label text-ink">
               Who works on what
             </a>
@@ -63,6 +69,25 @@ export default function ResearchPage() {
             </a>
           </nav>
         </Reveal>
+      </section>
+
+      <section id="funding-deadlines" className="shell scroll-mt-28 pb-20 md:pb-28">
+        <SectionHeading eyebrow="Research opportunities"
+          title={fundingDeadlinePassed ? "Previous funding cycle" : "Research funding: October 14 deadlines"}
+          intro={<p>{fundingDeadlinePassed ? "These deadlines have passed. Check the official program pages for the next application cycle." : "Start by contacting a Fulton faculty mentor whose research matches your interests. Each program has its own eligibility rules and application requirements."}</p>} />
+        <ul className="mt-10">
+          {fundingOpportunities.map(opportunity => <li key={opportunity.href} className="rule-t grid gap-5 py-7 md:grid-cols-12 md:gap-8">
+            <div className="md:col-span-5">
+              <h3 className="text-xl text-ink"><a className="link-underline" href={opportunity.href}>{opportunity.title} ↗</a></h3>
+              <p className="mt-3 text-sm text-maroon">Deadline: {opportunity.deadline}</p>
+            </div>
+            <div className="md:col-span-7 max-w-[60ch] text-graphite">
+              <p>{opportunity.eligibility}</p><p className="mt-3">{opportunity.note}</p>
+            </div>
+          </li>)}
+        </ul>
+        <p className="mt-6 max-w-[65ch] text-sm text-graphite">Program information checked October 6, 2026. Follow the linked ASU pages for full terms and application instructions. FURI prohibits generative AI use in its application process.</p>
+        <p className="mt-5 max-w-[65ch] text-graphite">Interested in photovoltaics or battery research? <a className="link-underline text-maroon" href={`mailto:${links.email}?subject=${encodeURIComponent("Research introduction: PV or batteries")}`}>Email AEE about an introduction to Dr. Nick Rolston</a>. Research fit and availability are for the faculty mentor to confirm.</p>
       </section>
 
       {/* --------------------------------------------- The six areas, mapped */}
@@ -125,11 +150,12 @@ export default function ResearchPage() {
           <SectionHeading
             number="02"
             eyebrow="Recent work"
-            title="These are live places, not an org chart"
+            title="Recent energy research at ASU"
             intro={
               <p>
-                A few things out of ASU labs recently, so the list above reads as people rather
-                than institutions. All from ASU News.
+                Selected reports on the people, systems and materials behind ASU energy research.
+                Dates are article publication dates; summaries distinguish research plans from
+                demonstrated results. Checked against official ASU sources on October 6, 2026.
               </p>
             }
           />

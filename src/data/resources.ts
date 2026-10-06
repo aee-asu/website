@@ -17,6 +17,31 @@ export type ResourceGroup = {
   links: ResourceLink[];
 };
 
+/** Verified against official program pages on October 6, 2026. */
+export const fundingOpportunities = [
+  {
+    title: "FURI — undergraduate research",
+    deadline: "October 14, 2026, at 5 p.m.",
+    href: "https://students.engineering.asu.edu/furi/",
+    eligibility: "Full-time Fulton undergraduates in good academic standing, from their second ASU semester onward. Online students may apply.",
+    note: "Spring 2027 faculty-mentored research: $1,500 stipend per funded semester and eligibility to request up to $400 for supplies. Find a Fulton faculty mentor before preparing your application.",
+  },
+  {
+    title: "MORE — master's research",
+    deadline: "October 14, 2026 — check the program for the submission time",
+    href: "https://students.engineering.asu.edu/graduate/research/more/",
+    eligibility: "Fulton master's students in good academic standing, from their second ASU semester onward. Academic and employment eligibility rules apply.",
+    note: "Spring 2027 research with a Fulton faculty mentor: one semester of funding, a $1,500 stipend and eligibility to request up to $400 for supplies. Review restrictions on existing assistantships with the program team.",
+  },
+  {
+    title: "ASU–TSMC Accelerated Master's Pathway",
+    deadline: "October 14, 2026, by 11:59 p.m.",
+    href: "https://innercircle.engineering.asu.edu/2026/09/help-solve-challenges-in-semiconductor-manufacturing-design-and-materials-apply-by-oct-14/",
+    eligibility: "Fulton students in good academic standing who are currently in the master's year of an Accelerated Master's program — the +1 year of a 4+1.",
+    note: "A $7,500 stipend for a one-semester applied project with a Fulton faculty mentor. Priority areas include solar energy, batteries, power electronics and semiconductor materials. Requirements include project deliverables, a portfolio, a TSMC Day presentation and engagement with TSMC staff.",
+  },
+];
+
 export const chapterResources: ResourceGroup[] = [
   {
     id: "aee",
@@ -114,6 +139,11 @@ export const researchResources: ResourceGroup[] = [
       {
         title: "SURI — Summer Research Initiative",
         href: "https://students.engineering.asu.edu/graduate/research/suri/",
+      },
+      {
+        title: "MORE — Master’s Opportunity for Research in Engineering",
+        href: "https://students.engineering.asu.edu/graduate/research/more/",
+        note: "Faculty-mentored research for eligible Fulton master's students. Review the program's academic and employment eligibility requirements before applying.",
       },
       {
         title: "NSF Research Experiences for Undergraduates",
@@ -294,9 +324,9 @@ export const energyAtASU: AreaResearch[] = [
     area: "Buildings & Efficiency",
     centers: [
       {
-        name: "ASU Energy Efficiency Center",
-        href: "https://engineering.asu.edu/research-themes/competitive-manufacturing/asu-energy-efficiency-center/",
-        note: "The closest center on campus to what AEE certifies people to do — industrial assessment, measurement and efficiency work.",
+        name: "ASU Energy Efficiency Center — ITAC@ASU",
+        href: "https://eec.asu.edu/",
+        note: "A DOE-funded Industrial Training and Assessment Center. Students help conduct free, one-day energy assessments for qualifying small and medium-sized manufacturers and other eligible facilities, identifying energy, waste and productivity improvements while learning measurement, analysis and technical reporting.",
       },
       {
         name: "EPIXC",
@@ -315,7 +345,7 @@ export const energyAtASU: AreaResearch[] = [
         note: "Load forecasting and grid planning — where the data center question lands as an engineering problem rather than a headline.",
       },
     ],
-    gap: "No ASU center is dedicated to this yet, which is worth noticing: it is the fastest-moving thing in Arizona energy and the research structure has not caught up. Right now the work sits inside power systems groups.",
+    gap: "Data-center energy research also spans multiple ASU units. The ASU–DCX MARVEL research announcement in Recent work below connects reactor-grid interactions, AI workloads and thermal-to-electric systems.",
   },
   {
     number: "05",
@@ -380,7 +410,7 @@ Thank you,
 [name], [ASURITE email], [phone]`;
 
 /**
- * Recent energy work out of ASU labs, from ASU News.
+ * Recent energy work from official ASU News, Engineering News and school reports.
  *
  * The point of this list is not the science. It is to show a student that the
  * centers above are live places doing things this year, with names attached —
@@ -391,28 +421,76 @@ Thank you,
  */
 export const recentWork = [
   {
+    title: "DOE recognizes ASU students' industrial energy assessments",
+    href: "https://news.asu.edu/20261005-science-and-technology-doe-lauds-student-program-provides-energy-audits-state-businesses",
+    date: "October 5, 2026",
+    note: "Patrick Phelan's ITAC team trains students through free, one-day assessments for eligible businesses. The report covers facility visits, measurement equipment, utility analysis and technical reporting — practical work connecting energy efficiency with manufacturing.",
+  },
+  {
+    title: "Can game theory save the grid?",
+    href: "https://news.engineering.asu.edu/2026/09/can-game-theory-save-the-grid/",
+    date: "September 25, 2026",
+    note: "Margaret Garcia and Paul Grogan are starting an NSF-funded study of how private solar, battery and water-reuse decisions affect shared infrastructure. The project will model reliability, affordability and utility incentives.",
+  },
+  {
+    title: "Continuous power for extreme environments",
+    href: "https://news.engineering.asu.edu/2026/09/continuous-power-for-extreme-environments/",
+    date: "September 8, 2026",
+    note: "Nick Rolston's Army-funded project investigates radiation damage and recovery in semiconductor materials for radiovoltaic power. This is foundational materials research toward long-lived remote power sources, not a deployed power system.",
+  },
+  {
+    title: "ASU awarded DOE Genesis Mission grant for grid reliability research",
+    href: "https://news.asu.edu/20260722-science-and-technology-asu-awarded-doe-genesis-mission-grant-electrical-grid-reliability",
+    date: "July 22, 2026",
+    note: "Karen Fisher-Vanden will lead an ASU team developing AI-assisted scenario planning for grid resilience. The announced project will assess demand changes, new technologies and extreme weather with national-lab and university collaborators.",
+  },
+  {
+    title: "Advancing solar cell technology through materials research",
+    href: "https://semte.engineering.asu.edu/news/advancing-solar-cell-technology-through-materials-research/",
+    date: "June 12, 2026",
+    note: "Feng Yan's lab studies thin-film and tandem solar cells, including perovskites. The team uses machine learning to narrow fabrication conditions and guide experiments on semiconductor materials and device performance.",
+  },
+  {
     title: "Supercharged science to drive battery breakthroughs",
-    href: "https://news.asu.edu/b/20260226-supercharged-science-drive-battery-breakthroughs",
-    date: "February 2026",
-    note: "Xin Xu's SEEN Lab — solid state ionics and electroceramics — on a Department of Energy Early Career award.",
+    href: "https://news.engineering.asu.edu/2026/02/supercharged-science-to-drive-battery-breakthroughs/",
+    date: "February 19, 2026",
+    note: "Xin Xu's SEEN Lab received a DOE Early Career award to study ion behavior under extreme electric fields. The research could inform batteries and fuel cells; the article describes research goals, not a finished battery product.",
+  },
+  {
+    title: "Unlocking the next generation of solar energy",
+    href: "https://news.engineering.asu.edu/2025/12/unlocking-the-next-generation-of-solar-energy/",
+    date: "December 19, 2025",
+    note: "ASU spinout Beyond Silicon, co-founded by Jason Yu and Zachary Holman, is developing perovskite-on-silicon tandem cells. The report connects device architecture with manufacturing compatibility and the company's commercialization work.",
   },
   {
     title: "ASU's LEAPS lab marks a decade of energy impact",
     href: "https://news.asu.edu/20251212-science-and-technology-asus-leaps-lab-marks-decade-energy-impact",
-    date: "December 2025",
-    note: "Ten years of solar and energy systems work in one lab.",
+    date: "December 12, 2025",
+    note: "Nathan Johnson's LEAPS team reviews a decade of microgrid development, energy planning and workforce training. Projects include tribal electrification in Arizona and work supporting mini-grid development in Fiji.",
   },
   {
-    title: "ASU technical innovation enables more reliable and less expensive electricity",
-    href: "https://news.asu.edu/20250417-science-and-technology-asu-technical-innovation-enables-more-reliable-and-less-expensive",
-    date: "April 2025",
-    note: "Grid reliability and cost — the PSERC end of the field.",
+    title: "ASU and DCX selected to study microreactor power for data centers",
+    href: "https://news.asu.edu/20251209-science-and-technology-us-department-energy-selects-asu-and-dcx-pioneer-new-ways-power",
+    date: "December 9, 2025",
+    note: "A DOE MARVEL selection announcement outlines planned work on reactor-grid interactions, AI load modeling and thermal-to-electric optimization. It does not report an operating ASU nuclear-powered data center.",
+  },
+  {
+    title: "Building a blueprint for rural energy resilience",
+    href: "https://news.engineering.asu.edu/2025/08/building-a-blueprint-for-rural-energy-resilience/",
+    date: "August 12, 2025",
+    note: "Kristen Parrish and LEAPS researchers are supporting a Hopi Utilities Corporation and BoxPower project combining solar, battery storage and existing diesel generation. The report describes design and sizing work, with operation still prospective at publication.",
   },
   {
     title: "Turning up the light: Plants, semiconductors and fuel production",
     href: "https://news.asu.edu/20250418-science-and-technology-turning-light-plants-semiconductors-and-fuel-production",
-    date: "April 2025",
-    note: "Semiconductors and photochemistry aimed at making fuel.",
+    date: "April 18, 2025",
+    note: "Gary Moore's group studied how illumination changes hydrogen-forming reactions on a coated semiconductor. The reported ACS Catalysis study connects light intensity, reaction conditions and solar-fuel production.",
+  },
+  {
+    title: "ASU technical innovation enables more reliable and less expensive electricity",
+    href: "https://news.asu.edu/20250417-science-and-technology-asu-technical-innovation-enables-more-reliable-and-less-expensive",
+    date: "April 17, 2025",
+    note: "James Nelson's LEAPS team demonstrated ACES energy controls at AZ DEMA's Papago Park site. ASU reports lower utility bills and better performance during simulated outages at that demonstration site, with SRP supporting the project.",
   },
 ];
 
