@@ -38,7 +38,7 @@ export const fundingOpportunities = [
     deadline: "October 14, 2026, by 11:59 p.m.",
     href: "https://innercircle.engineering.asu.edu/2026/09/help-solve-challenges-in-semiconductor-manufacturing-design-and-materials-apply-by-oct-14/",
     eligibility: "Fulton students in good academic standing who are currently in the master's year of an Accelerated Master's program — the +1 year of a 4+1.",
-    note: "A $7,500 stipend for a one-semester applied project with a Fulton faculty mentor. Priority areas include solar energy, batteries, power electronics and semiconductor materials. Requirements include project deliverables, a portfolio, a TSMC Day presentation and engagement with TSMC staff.",
+    note: "Upon project completion, TSMC provides a $7,500 taxable student stipend and a $1,140 faculty payment. Projects run for one semester with a Fulton faculty mentor; the project topic must stay the same. Priority areas include solar energy, batteries, power electronics and semiconductor materials. Requirements include a completed project and final report, a semiconductor industry portfolio, a TSMC Day presentation and engagement with TSMC staff. Questions: more@asu.edu.",
   },
 ];
 
