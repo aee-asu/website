@@ -106,6 +106,11 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
+      <nav aria-label="About sections" className="shell flex flex-wrap gap-6 pb-10">
+        <a href="#leadership" className="link-underline">Meet the leadership</a>
+        <Link href="/partner" className="link-underline">Work with us</Link>
+      </nav>
+
       {/* ------------------------------------------------------------ What AEE is */}
       <section className="shell pb-20 md:pb-28">
         <div className="grid gap-10 md:grid-cols-12">
@@ -235,7 +240,7 @@ export default function AboutPage() {
       </section>
 
       {/* ------------------------------------------------------------ Leadership */}
-      <section className="shell pb-20 md:pb-28">
+      <section id="leadership" className="shell scroll-mt-28 pb-20 md:pb-28">
         <SectionHeading number="05" eyebrow="Leadership" title="Who runs the chapter" />
 
         <ul className="mt-14">

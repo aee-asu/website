@@ -58,7 +58,7 @@ export default function JoinPage() {
         <Reveal>
           <a
             href={links.join}
-            className="group block bg-ink px-7 py-12 text-paper transition-colors hover:bg-maroon md:px-14 md:py-16"
+            className="on-dark group block bg-ink px-7 py-12 text-paper transition-colors hover:bg-maroon md:px-14 md:py-16"
           >
             <span className="label text-gold">Step one, and the only one that&rsquo;s required</span>
             <span className="display mt-6 block text-[clamp(2rem,5.5vw,4rem)]">
@@ -89,8 +89,8 @@ export default function JoinPage() {
           title="Join the community"
           intro={
             <p>
-              The roster makes it official. These are where it actually starts being useful. You
-              can join any of them without doing the roster first, but do the roster anyway.
+              Sun Devil Central is the membership roster. Discord is where we talk between
+              events; Instagram and LinkedIn carry public updates. Pick the channels you use.
             </p>
           }
         />
@@ -122,7 +122,7 @@ export default function JoinPage() {
       </section>
 
       {/* ----------------------------------------------------------- Contact */}
-      <section className="bg-bone">
+      <section id="contact" className="scroll-mt-28 bg-bone">
         <div className="shell py-20 md:py-28">
           <div className="grid gap-10 md:grid-cols-12">
             <Reveal className="md:col-span-4">

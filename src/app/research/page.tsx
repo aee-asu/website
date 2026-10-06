@@ -36,11 +36,8 @@ export default function ResearchPage() {
         </Reveal>
         <Reveal delay={80}>
           <p className="measure mt-10 text-lg leading-relaxed text-graphite md:text-xl">
-            ASU lists 56 research centers and doesn&rsquo;t say which of them are about energy.
-            The university&rsquo;s own energy pages don&rsquo;t map to how anyone actually
-            thinks about the field. So we went through them, sorted the energy ones into the
-            six areas we work on, and named the centers. Then the part everyone gets stuck on:
-            the email.
+            Explore ASU research centers by energy topic, find directories and funding
+            programs, and use our email example to introduce yourself to a lab.
           </p>
         </Reveal>
 
@@ -123,7 +120,7 @@ export default function ResearchPage() {
       </section>
 
       {/* ------------------------------------------------------- Recent work */}
-      <section id="recent" className="bg-bone">
+      <section id="recent" className="scroll-mt-28 bg-bone">
         <div className="shell scroll-mt-28 py-20 md:py-28">
           <SectionHeading
             number="02"
@@ -207,8 +204,8 @@ export default function ResearchPage() {
           <Reveal className="rule-t mt-10 pt-8">
             <h3 className="label text-gold">Step four, written out</h3>
             <p className="measure mt-4 text-[0.9375rem] leading-relaxed text-mist">
-              Nobody stalls on steps one to three. They stall here, because &ldquo;send a short,
-              specific email&rdquo; is a restatement of the problem rather than help. So:
+              Starting the conversation can be the hardest step. Here is an example you can
+              adapt to a lab and a project that interest you.
             </p>
             <pre className="mt-6 max-w-[62ch] overflow-x-auto whitespace-pre-wrap rounded-none border border-[color:var(--rule-invert)] p-6 font-mono text-[0.8125rem] leading-relaxed text-mist">
               {emailTemplate}
@@ -231,9 +228,8 @@ export default function ResearchPage() {
           title="What the letters after an energy professional's name mean"
           intro={
             <p>
-              AEE is a certifying body before it is anything else. If you meet someone in this
-              industry with initials after their name, they are usually AEE&rsquo;s. Worth knowing
-              what they are, and worth knowing early which one you can actually go for.
+              AEE offers credentials in energy management, auditing and related specialties.
+              Here is what several of them cover, and how to check the experience requirements.
             </p>
           }
         />
@@ -265,12 +261,12 @@ export default function ResearchPage() {
         <Reveal className="mt-16">
           <div className="bg-bone p-8 md:p-12">
             <h3 className="display text-[clamp(1.5rem,3.4vw,2.25rem)] text-ink">
-              You almost certainly cannot sit the CEM yet. That is normal.
+              Planning toward CEM or EMIT
             </h3>
             <div className="measure mt-6 space-y-5 text-[1.0625rem] leading-relaxed text-graphite">
               <p>
-                Every route to the CEM needs a completed degree <em>and</em> years of professional
-                experience on top of it:
+                CEM eligibility depends on relevant experience and your education or professional
+                license. AEE also offers a route based on experience without a degree:
               </p>
               <ul className="space-y-3">
                 {certificationPath.routes.map((route) => (
@@ -280,13 +276,12 @@ export default function ResearchPage() {
                 ))}
               </ul>
               <p>
-                So when someone tells an undergraduate to &ldquo;go get your CEM,&rdquo; they have
-                not checked. What exists for people in your position is{" "}
+                If you do not yet meet the CEM eligibility criteria, one option is{" "}
                 <strong className="font-normal text-ink">
                   EMIT, the Energy Manager In Training credential
                 </strong>
-                , for applicants who do not yet meet the CEM experience requirement. It holds for
-                six years, which is meant to be enough time to earn the experience and convert.
+                . It requires approved training, an application and passing the CEM exam.
+                The credential is valid for six years while you work toward full eligibility.
               </p>
               <p>
                 The useful move as a student is not the exam. It is the experience clock: internships,
@@ -314,8 +309,9 @@ export default function ResearchPage() {
             </div>
 
             <p className="measure mt-8 text-sm leading-relaxed text-ash">
-              Fees and eligibility routes change. These were taken from AEE&rsquo;s own candidate
-              handbook and are worth re-checking against it before you plan around them.
+              Eligibility routes and US application fees were checked against AEE&rsquo;s
+              Becoming a CEM page on October 5, 2026. Training costs vary; check the current
+              program and handbook before planning around them.
             </p>
           </div>
         </Reveal>

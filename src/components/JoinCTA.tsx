@@ -7,7 +7,7 @@ const channels = [
   {
     href: links.join,
     label: "Sun Devil Central",
-    note: "Officially join the club. This is the one that actually counts.",
+    note: "Add yourself to the official chapter membership roster.",
   },
   {
     href: links.discord,

@@ -109,25 +109,16 @@ export function eventSchema(event: ChapterEvent, path = "/events") {
     endDate: event.endDate ?? event.date,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    url: `${site.url}${path}`,
-    isAccessibleForFree: true,
+    url: `${site.url}${event.href ?? `${path}#${event.slug}`}`,
     location: {
       "@type": "Place",
       name: [event.location, event.campus].filter(Boolean).join(", "),
       address: postalAddress(event.campus),
     },
     organizer: { "@id": `${site.url}/#organization` },
-    performer: { "@id": `${site.url}/#organization` },
   };
 
   if (event.image) schema.image = `${site.url}${event.image}`;
-  if (event.registrationUrl) schema.offers = {
-    "@type": "Offer",
-    url: event.registrationUrl,
-    price: 0,
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-  };
 
   return schema;
 }

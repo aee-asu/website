@@ -144,7 +144,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
               ref={closeRef}
               type="button"
               onClick={close}
-              className="label text-mist hover:text-gold"
+              className="label min-h-11 px-2 text-mist hover:text-gold"
             >
               Close ✕
             </button>
@@ -163,20 +163,20 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
             />
           </div>
 
-          <div className="shell flex shrink-0 items-center justify-between gap-6 py-5">
+          <div className="shell flex shrink-0 flex-col items-start justify-between gap-3 py-4 sm:flex-row sm:items-center sm:gap-6">
             <p className="measure text-sm text-mist">{current.alt}</p>
             <div className="flex shrink-0 gap-6">
               <button
                 type="button"
                 onClick={() => step(-1)}
-                className="label text-mist hover:text-gold"
+                className="label min-h-11 px-2 text-mist hover:text-gold"
               >
                 ← Prev
               </button>
               <button
                 type="button"
                 onClick={() => step(1)}
-                className="label text-mist hover:text-gold"
+                className="label min-h-11 px-2 text-mist hover:text-gold"
               >
                 Next →
               </button>

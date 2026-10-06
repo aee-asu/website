@@ -4,13 +4,13 @@ import Link from "next/link";
 
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { links, site } from "@/data/site";
+import { links } from "@/data/site";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Partner with us",
+  title: "Host a visit, talk or workshop",
   description:
-    "How companies, labs, utilities, startups and ASU alumni can work with the Association of Energy Engineers Student Chapter at Arizona State University — speaking, mentoring, hosting a visit, setting a challenge or supporting an event.",
+    "Host a site visit, give a technical talk, run a workshop, share career opportunities or collaborate on a student project with AEE at ASU. Contact the chapter officers directly.",
   path: "/partner",
 });
 
@@ -23,36 +23,24 @@ const mailto = `mailto:${links.email}?subject=${encodeURIComponent(
 
 const ways = [
   {
-    label: "Speak",
-    body: "An hour with students who showed up because they wanted to. The talks that land are about actual projects: what the problem was, what you tried, what it cost.",
+    label: "Host a site visit",
+    body: "Show students a facility, lab, control room or engineering site. Tell us what they can see, any access requirements and the group size you can accommodate.",
   },
   {
-    label: "Run a training session",
-    body: "Past sessions have covered energy efficiency auditing and microgrid design, with equipment on the table for people to use.",
+    label: "Give a technical talk",
+    body: "Walk through a real engineering problem, the decisions your team made and what you learned. Suggest a topic and speaker; we can discuss the format and student questions.",
   },
   {
-    label: "Host a visit",
-    body: "A plant, a control room, a lab, a site. Seeing a real system working is hard to replicate in a classroom.",
+    label: "Run a workshop",
+    body: "Help students work through a method, tool or piece of equipment. Tell us the learning goal, prerequisites and what participants would need to bring.",
   },
   {
-    label: "Set a challenge",
-    body: "Give our hackathon a real problem from your work. You get a weekend of prototypes against it, and the students get a brief that isn't made up.",
+    label: "Share career opportunities",
+    body: "Send internships, co-ops or graduate roles with a role description, eligibility, application link and deadline. The officers can share relevant opportunities with members.",
   },
   {
-    label: "Judge or mentor",
-    body: "Two days in April, or a single evening if that's easier. Mentors get asked the questions students won't ask a speaker at a podium.",
-  },
-  {
-    label: "Support an event",
-    body: "Prizes, food, materials, travel for a site visit. Budgets are small at club scale, so it doesn't take much to make a difference.",
-  },
-  {
-    label: "Recruit",
-    body: "Internships, co-ops, graduate roles, thesis projects. We'll pass an opening to the members it actually fits instead of blasting it out to everyone.",
-  },
-  {
-    label: "Something else",
-    body: "We're new, and most of what we do started as somebody's suggestion. If you've got one, send it.",
+    label: "Collaborate on a student project",
+    body: "Bring a scoped engineering question or project idea. Include the expected time commitment, available support and any data or access constraints so we can discuss a realistic student contribution.",
   },
 ];
 
@@ -67,16 +55,16 @@ export default function PartnerPage() {
     <>
       <section className="shell pb-14 pt-16 md:pb-20 md:pt-24">
         <Reveal>
-          <p className="label text-maroon">Partner with us</p>
+          <p className="label text-maroon">Industry and the chapter</p>
           <h1 className="display mt-10 max-w-[16ch] text-[clamp(2.5rem,7.5vw,6rem)] text-ink">
-            Work with the chapter.
+            Bring students closer to your engineering.
           </h1>
         </Reveal>
         <Reveal delay={80}>
           <p className="measure mt-10 text-lg leading-relaxed text-graphite md:text-xl">
-            This page is for companies, utilities, startups, national labs, ASU faculty and alumni
-            who want to work with the chapter. Email us and it goes straight to the officers.
-            There&rsquo;s no form.
+            Host a site visit, give a technical talk, run a workshop, share career opportunities
+            or collaborate on a student project. Email the chapter officers with what you have
+            in mind and roughly when.
           </p>
         </Reveal>
       </section>
@@ -86,12 +74,11 @@ export default function PartnerPage() {
         <Reveal>
           <a
             href={mailto}
-            className="group block bg-ink px-7 py-12 text-paper transition-colors hover:bg-maroon md:px-14 md:py-16"
+            className="on-dark group block bg-ink px-7 py-12 text-paper transition-colors hover:bg-maroon md:px-14 md:py-16"
           >
-            <span className="label text-gold">The direct route</span>
-            <span className="display mt-6 block break-words text-[clamp(1.375rem,4.5vw,3.25rem)]">
-              {links.email}
-            </span>
+            <span className="label text-gold">Contact the chapter</span>
+            <span className="display mt-6 block text-[clamp(2rem,4.5vw,3.25rem)]">Email the officers</span>
+            <span className="mt-4 block break-all text-sm md:text-base">{links.email}</span>
             <span className="mt-6 flex flex-wrap items-baseline justify-between gap-4">
               <span className="max-w-[52ch] leading-relaxed text-mist">
                 Tell us who you are, what you have in mind and roughly when. An officer will
@@ -108,23 +95,29 @@ export default function PartnerPage() {
         </Reveal>
       </section>
 
+      <nav aria-label="Industry destinations" className="shell flex flex-wrap gap-6 pb-10">
+        <Link href="/events#past-events" className="link-underline">See past industry sessions</Link>
+        <a href="#recruit" className="link-underline">Share a role with members</a>
+        <Link href="/about#leadership" className="link-underline">Meet the leadership</Link>
+      </nav>
+
       {/* -------------------------------------------------------------- Ways in */}
       <section className="shell pb-20 md:pb-28">
         <SectionHeading
           number="01"
-          eyebrow="Ways in"
-          title="What working with us looks like"
+          eyebrow="Five ways to contribute"
+          title="What you can bring"
           intro={
             <p>
-              There are no sponsorship tiers here. Pick whatever fits what you can actually give;
-              an afternoon of your time is as useful to us as money.
+              Choose a format that fits your work. These details help the officers plan the
+              next step with you.
             </p>
           }
         />
 
-        <ul className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {ways.map((way, index) => (
-            <li key={way.label}>
+            <li key={way.label} id={way.label === "Share career opportunities" ? "recruit" : undefined} className="scroll-mt-28">
               <Reveal delay={index * 50}>
                 <div className="rule-t pt-6">
                   <h3 className="text-xl text-ink">{way.label}</h3>
@@ -185,38 +178,6 @@ export default function PartnerPage() {
             </Reveal>
           </div>
         </div>
-      </section>
-
-      {/* ------------------------------------------------------- Other routes */}
-      <section className="shell py-20 md:py-28">
-        <SectionHeading
-          number="03"
-          eyebrow="Other routes"
-          title="If email isn&rsquo;t your thing"
-          intro={
-            <p>
-              {site.plainName} is on LinkedIn, and everything we run is posted to Instagram — both
-              reach the same officers. Students looking to join should start on the{" "}
-              <Link href="/join" className="link-underline text-ink">
-                Join page
-              </Link>{" "}
-              instead.
-            </p>
-          }
-        />
-        <Reveal delay={60}>
-          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
-            <a href={links.linkedin} className="link-underline text-lg text-ink">
-              LinkedIn ↗
-            </a>
-            <a href={links.instagram} className="link-underline text-lg text-ink">
-              Instagram ↗
-            </a>
-            <a href={`mailto:${links.email}`} className="link-underline text-lg text-ink">
-              {links.email}
-            </a>
-          </div>
-        </Reveal>
       </section>
 
       <Reveal className="shell pb-20 md:pb-28">

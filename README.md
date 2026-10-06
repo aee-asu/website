@@ -47,6 +47,10 @@ Then open <http://localhost:3000>.
 | `npm start` | Serve the production build locally |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | TypeScript, without emitting files |
+| `npm run check:events` | Phoenix date boundaries, multi-day events, drafts and data integrity |
+| `npm run check:site` | Playwright route, image, link, responsive and keyboard checks against a running local server |
+
+Browser checks default to `http://localhost:3666`. Set `BASE_URL` to another local preview URL and `QA_OUT` to a screenshot/report directory if needed. Playwright Chromium must be installed. For release checks, run `npm run build`, serve with `npm start -- --port 3667`, then set `BASE_URL=http://localhost:3667`. Screenshots and JSON reports belong under the ignored `.qa/` directory.
 
 ---
 
@@ -79,6 +83,9 @@ Things worth knowing:
 - **`status: "draft"` hides an event completely.** Use it for anything not yet confirmed — it stays in the file as a note to yourself without appearing publicly.
 - **Multi-day events** take an `endDate`. The date then renders as "April 18–19, 2026".
 - **`featured: true`** promotes an event into the highlighted block on the homepage. Use it for one event at a time.
+- The featured homepage story is a retrospective: only past published events qualify. Upcoming events use the calendar section.
+- Optional `speaker`, `organization`, `recap` and `learningOutcomes` fields support evidence-rich records. Add only confirmed facts. Past rows reuse an event's image and alt text and do not show registration links.
+- `registrationUrl` enables RSVP. If it is missing, the site shows `registrationNote` or an explicit “details have not been posted” message with an email inquiry. Never assume no URL means no registration requirement.
 - **Categories** are fixed: Industry, Technical, Career, Research, Community, Site Visit, Workshop, Competition. To add another, add it to the `EventCategory` type at the top of the file.
 
 ### Photos — `scripts/selection.json`, then `src/data/gallery.ts`
@@ -158,13 +165,13 @@ scripts/          image and brand asset preparation
 docs/             deployment notes
 ```
 
-Pages are static: every route is pre-rendered at build time, so the site is fast and there is nothing to keep running.
+Routes are pre-rendered at build time. Home and Events use hourly incremental static regeneration so date-dependent lists refresh without a deployment. Serve with Next.js/Vercel; a plain static export would lose that refresh behavior. Event days follow America/Phoenix regardless of the server timezone.
 
 ### Design notes for whoever inherits this
 
 - **Colour.** ASU maroon (`#8C1D40`) carries the identity and gold (`#FFC627`) is used only as an accent on dark surfaces — never as text on white, where it fails contrast. Everything else is ink, paper and hairline rules.
 - **Type.** Newsreader for display statements, Inter for interface and body, IBM Plex Mono for labels and numbering. Three faces, used consistently.
-- **Motion** is limited to a short fade-and-lift on scroll, and it turns itself off entirely for anyone with reduced-motion enabled.
+- **Motion** is limited to small interaction transitions and respects reduced-motion preferences. Reading content is server-rendered and never hidden while waiting for JavaScript. `Reveal` remains a compatibility layout wrapper; its older `delay` props are harmless and can be removed during future edits.
 - **Accessibility** is part of the design, not a later pass: semantic landmarks, one `<h1>` per page with no skipped levels, visible focus rings, a skip link, a keyboard-operable mobile menu and lightbox, and AA contrast throughout.
 
 ---

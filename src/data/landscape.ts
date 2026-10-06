@@ -39,7 +39,7 @@ const EIA_AZ = "https://www.eia.gov/state/analysis.php?sid=AZ";
 export const arizonaStats: Stat[] = [
   {
     value: "38% → 8%",
-    body: "Coal's share of Arizona's electricity generation, 2014 to 2024. The Navajo Generating Station, once the state's second-largest power plant, closed in 2019, and the last coal mine in Arizona shut the same year. An entire fuel left the state's mix inside a decade.",
+    body: "Coal's share of Arizona's electricity generation, 2014 to 2024. The Navajo Generating Station, once the state's second-largest power plant, closed in 2019, and the last coal mine in Arizona shut the same year.",
     source: "EIA, Arizona State Energy Profile",
     sourceUrl: EIA_AZ,
     asOf: "July 2025 (2024 data)",
@@ -87,7 +87,8 @@ export const arizonaStats: Stat[] = [
 
 export const nationalStats: Stat[] = [
   {
-    value: "4.4% → 12%",
+    value: "6.7–12%",
+    unit: "by 2028",
     body: "Data centers used 4.4% of all US electricity in 2023. Berkeley Lab puts them at 6.7–12% by 2028 — 176 TWh growing to somewhere between 325 and 580 TWh in five years.",
     source: "Berkeley Lab / DOE",
     sourceUrl:

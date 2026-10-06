@@ -35,7 +35,28 @@ export type ChapterEvent = {
   description: string;
   image?: string;
   imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageCaption?: string;
   registrationUrl?: string;
+  /** Omit until confirmed. A missing URL never implies walk-in admission. */
+  registrationNote?: string;
+  speaker?: string;
+  organization?: string;
+  host?: string;
+  /** Planned objectives must never be treated as verified past outcomes. */
+  learningObjectives?: string[];
+  arrivalNotes?: string;
+  preparationNotes?: string;
+  transportationNotes?: string;
+  audience?: string;
+  capacityNote?: string;
+  /** Specific outstanding details, removed as the organizers confirm them. */
+  pendingDetails?: string[];
+  /** Subjects explicitly supported by the existing event description. */
+  topics?: string[];
+  recap?: string;
+  learningOutcomes?: string[];
   /** Pulls the event out onto the homepage and the top of the archive. */
   featured?: boolean;
   /** Set when an event has a page of its own, e.g. the hackathon. */
@@ -56,8 +77,11 @@ export const events: ChapterEvent[] = [
     campus: "Tempe campus",
     category: "Community",
     description:
-      "Come find our table, meet the officers and ask what we're doing this year. No commitment, just come talk to us.",
+      "Officers met students at the Memorial Union and introduced the chapter's plans for the year.",
     image: "/images/events/taste-of-the-mu-2026.jpg",
+    imageWidth: 2000,
+    imageHeight: 1500,
+    imageCaption: "Officers at the chapter's table in the Memorial Union.",
     imageAlt:
       "The chapter's table at Taste of the MU, with three officers behind it and chapter giveaways laid out across the front.",
     status: "published",
@@ -71,12 +95,17 @@ export const events: ChapterEvent[] = [
     campus: "Tempe campus",
     category: "Community",
     description:
-      "The big fall org fair. We'll be there the whole time, so it's an easy first stop if you're new to ASU and want in on the energy side of campus.",
+      "The chapter joined the fall organization fair to meet students interested in energy and introduce upcoming activities.",
     status: "published",
   },
   {
     slug: "asu-aep-solar-fab-tour-2026",
     title: "ASU AEP Solar Fab Tour",
+    speaker: "Wardia Debray, Process Engineer",
+    organization: "ASU AEP Solar Fab",
+    host: "ASU AEP Solar Fab",
+    href: "/events/asu-aep-solar-fab-tour-2026",
+    topics: ["Photovoltaic fabrication", "Materials and processes"],
     date: "2026-09-11",
     time: "3:00–5:00 PM",
     location: "MTW Building, ASU",
@@ -84,6 +113,9 @@ export const events: ChapterEvent[] = [
     description:
       "A behind-the-scenes tour of the ASU AEP Solar Fab led by Wardia Debray, Process Engineer, following how photovoltaic devices move through fabrication and the materials and processes behind solar technology.",
     image: "/images/events/solar-fab-tour-2026.jpg",
+    imageWidth: 1800,
+    imageHeight: 1350,
+    imageCaption: "Students inside the fabrication facility during the solar-fab visit.",
     imageAlt:
       "Students in yellow cleanroom gowns, hair covers and face masks posing as a group inside a fabrication facility.",
     status: "published",
@@ -91,13 +123,19 @@ export const events: ChapterEvent[] = [
   {
     slug: "applied-materials-industry-session-2026",
     title: "Applied Materials Industry Session",
+    speaker: "Rony David Mathew",
+    organization: "Applied Materials",
+    topics: ["Semiconductor manufacturing", "Industry careers"],
     date: "2026-09-19",
     time: "11:00 AM–12:30 PM",
     location: "Creative Commons 202",
     category: "Industry",
     description:
-      "Rony Mathews of Applied Materials on semiconductor manufacturing, industry trends and careers in advanced technology, followed by questions from students.",
+      "Rony David Mathew of Applied Materials on semiconductor manufacturing, industry trends and careers in advanced technology, followed by questions from students.",
     image: "/images/events/applied-materials-2026.jpg",
+    imageWidth: 1800,
+    imageHeight: 1350,
+    imageCaption: "Students listen during the Applied Materials industry session.",
     imageAlt:
       "A speaker presents next to a large screen while students listen from chairs and benches in an open, modern room.",
     status: "published",
@@ -105,6 +143,7 @@ export const events: ChapterEvent[] = [
   {
     slug: "aee-ieee-hkn-town-hall-2026",
     title: "AEE × IEEE-HKN Town Hall & Mixer",
+    pendingDetails: ["RSVP link", "Arrival instructions", "Audience and capacity"],
     date: "2026-10-08",
     time: "5:00–6:30 PM",
     location: "GWC 487",
@@ -117,6 +156,7 @@ export const events: ChapterEvent[] = [
   {
     slug: "leaps-microgrids-workshop-2026",
     title: "LEAPS Microgrids Workshop",
+    pendingDetails: ["RSVP link", "Exact building, room and meeting point", "Parking or transportation", "What to bring", "Audience and capacity", "Workshop learning goals"],
     date: "2026-10-21",
     time: "10:00 AM–1:00 PM",
     location: "LEAPS Lab",
@@ -225,6 +265,9 @@ export const events: ChapterEvent[] = [
     description:
       "Our 24-hour energy hackathon. Four tracks, real challenge statements from industry, mentors on the floor overnight, and judging Sunday morning.",
     image: "/images/events/hackathon-2026-group.jpg",
+    imageWidth: 1024,
+    imageHeight: 768,
+    imageCaption: "Participants, organizers and judges after the hackathon awards.",
     imageAlt:
       "Participants, organizers and judges of the 2026 ASU Energy Hackathon standing together at the front of the lecture hall after the awards.",
     status: "published",

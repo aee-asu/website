@@ -284,7 +284,7 @@ export const energyAtASU: AreaResearch[] = [
       },
       {
         name: "AMPED — Advanced Materials, Processes and Energy Devices",
-        href: "https://neweconomy.asu.edu/amped/",
+        href: "https://impactarizona.asu.edu/amped-advanced-materials-processes-and-energy-devices-stc/",
         note: "Science and technology center covering energy devices and the materials inside them.",
       },
     ],
@@ -484,7 +484,8 @@ export const certificationPath = {
   routes: [
     "A four-year engineering or architecture degree, or a PE or RA license, plus three years of energy engineering or management experience.",
     "A four-year physics, earth science, environmental science or technology degree, plus four years of experience.",
-    "A four-year business or other degree, plus five years of experience.",
+    "A four-year business or related degree, plus five years of experience.",
+    "A two-year energy management associate degree plus six years, another two-year associate degree plus eight years, or no degree plus ten years of related experience.",
   ],
   facts: [
     { label: "Exam", value: "About 130 questions, four hours" },

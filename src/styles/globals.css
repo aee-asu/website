@@ -97,7 +97,7 @@
   /* Small uppercase mono label used for section numbers and eyebrows. */
   .label {
     font-family: var(--font-mono);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     font-weight: 500;
@@ -141,36 +141,10 @@
   .on-dark .rule-t,
   .on-dark .rule-b { border-color: var(--rule-invert); }
 
-  /*
-    Reveal-on-scroll. The hidden starting state is applied only where scripting
-    is enabled, so the content is never stranded invisible: without JavaScript
-    (or in a browser that does not support the query) everything simply renders
-    in place. `prefers-reduced-motion` removes the movement below.
-  */
-  @media (scripting: enabled) {
-    .reveal {
-      opacity: 0;
-      transform: translateY(8px);
-      transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
-      transition-delay: var(--reveal-delay, 0ms);
-    }
-
-    .reveal[data-shown="true"] {
-      opacity: 1;
-      transform: none;
-    }
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-
-  .reveal {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
 
   *,
   *::before,

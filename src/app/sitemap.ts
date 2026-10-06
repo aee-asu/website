@@ -6,6 +6,7 @@ const routes = [
   { path: "", priority: 1 },
   { path: "/about", priority: 0.8 },
   { path: "/events", priority: 0.8 },
+  { path: "/events/asu-aep-solar-fab-tour-2026", priority: 0.7 },
   { path: "/hackathon", priority: 0.9 },
   { path: "/research", priority: 0.8 },
   { path: "/gallery", priority: 0.6 },

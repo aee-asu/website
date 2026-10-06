@@ -1,6 +1,28 @@
 # Content inventory
 
+## Launch-readiness content — 6 October 2026
+
+Added a Solar Fab Field Note using the existing event record and three existing chapter photographs. Specific source mapping and limits are in `docs/launch-readiness-2026-10-06.md`. Its three observations are bounded to the recorded fabrication theme and visible samples, equipment and attire; no new process identification, numerical claim, quote or attendee testimony was added. Deeper technical takeaways await organizer input.
+
+LEAPS and mixer logistics remain unconfirmed. The user said they will supply them soon. Pending details are explicit in event listings; do not infer attendance requirements or exact meeting locations from general lab information.
+
+## Speaker name correction — 6 October 2026
+
+Corrected the Applied Materials event speaker and description from “Rony Mathews” to **Rony David Mathew**, supplied by the user and corroborated by his [public professional profile](https://in.linkedin.com/in/rony-david-mathew-) and an indexed [AEE chapter announcement](https://www.linkedin.com/posts/association-of-energy-engineers-aee-at-asu_aeeasu-appliedmaterials-semiconductors-activity-7505768737439023105-WGLY). The announcement corroborates the name and affiliation; it has not been established as the same September event, so no date, role or session-content changes were inferred from it.
+
 What was found in the chapter's Google Drive archive, what was used on the website, and what still needs a decision from an officer.
+
+## Implementation reconciliation — 5 October 2026
+
+The historical open-items section below predates newer commits. Current code is the implementation record:
+
+- `src/app/hackathon/page.tsx` publishes sponsor names and records chapter confirmation for public listing in August 2026. Its current sponsor list is OpenVPP, BKPK, Collide.io, Lovable, SRP and eSeed Challenge (Prescott Student Venture Fund). The older statement below that no sponsors are published is stale. No new sponsor claim or logo was added during this audit.
+- `src/data/leadership.ts` now includes the treasurer's portrait. The older “no portrait yet” note is stale; this audit did not independently renew photo consent.
+- September solar-fab and Applied Materials event photographs are now also rendered in past-event rows. Existing files and alt text are reused. Speaker and organization fields are extracted from descriptions already published; no learning outcomes or attendance numbers were invented.
+- The user will provide RSVP URLs later for the October calendar. Until supplied, listings explicitly say RSVP details have not been posted and link to an attendance inquiry. Exact LEAPS arrival/transport/preparation details and learning goals remain unknown.
+- The data-center headline now preserves the published 6.7–12% forecast range for 2028 rather than displaying only its upper bound. Source: the linked Berkeley Lab article, checked 5 October 2026. Coal copy no longer claims a fuel disappeared while displaying an 8% share.
+
+See `docs/launch-audit-2026-10-05.md` for the review, roadmap and validation scope. Historical source notes below are retained rather than treated as fresh verification.
 
 Source archive: `AEE Student Club -20260819T074531Z-1-001.zip` (2.0 GB, 488 files)
 Working copy: `_drive_raw/` — **git-ignored, never committed.** The original zip is untouched.

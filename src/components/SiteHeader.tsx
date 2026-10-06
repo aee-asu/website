@@ -26,6 +26,12 @@ export function SiteHeader() {
     const { body } = document;
     const previousOverflow = body.style.overflow;
     body.style.overflow = "hidden";
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const closeOnDesktop = () => {
+      if (desktop.matches) setOpenedOn(null);
+    };
+    desktop.addEventListener("change", closeOnDesktop);
+    closeOnDesktop();
 
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
@@ -40,7 +46,7 @@ export function SiteHeader() {
       );
       if (!focusable || focusable.length === 0) return;
 
-      const first = focusable[0];
+      const first = toggleRef.current ?? focusable[0];
       const last = focusable[focusable.length - 1];
       if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
@@ -54,6 +60,7 @@ export function SiteHeader() {
     document.addEventListener("keydown", onKeyDown);
     return () => {
       document.removeEventListener("keydown", onKeyDown);
+      desktop.removeEventListener("change", closeOnDesktop);
       body.style.overflow = previousOverflow;
     };
   }, [open]);
@@ -79,7 +86,7 @@ export function SiteHeader() {
           <span className="sr-only">{site.legalName}</span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-5 lg:flex xl:gap-8">
           {nav.map((item) => {
             const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
@@ -111,7 +118,7 @@ export function SiteHeader() {
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls="mobile-nav"
-          className="flex items-center gap-2.5 lg:hidden"
+          className="flex min-h-11 min-w-11 items-center justify-end gap-2.5 lg:hidden"
         >
           <span className="label text-ink-soft">{open ? "Close" : "Menu"}</span>
           <span aria-hidden className="relative block h-3 w-6">
@@ -136,7 +143,7 @@ export function SiteHeader() {
         hidden={!open}
         /* Sized with dvh so the panel still fits when mobile browser chrome
            expands and contracts. */
-        className="fixed left-0 right-0 top-[4.5rem] z-50 h-[calc(100dvh-4.5rem)] overflow-y-auto bg-paper lg:hidden"
+        className="fixed left-0 right-0 top-[4.5rem] z-50 h-[calc(100dvh-4.5rem)] overflow-y-auto bg-paper md:top-20 md:h-[calc(100dvh-5rem)] lg:hidden"
       >
         <nav aria-label="Primary, mobile" className="shell flex flex-col pb-16 pt-2">
           {nav.map((item, index) => {
@@ -145,6 +152,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setOpen(false)}
                 aria-current={active ? "page" : undefined}
                 className={`display rule-b py-6 text-[2rem] transition-colors hover:text-maroon ${
                   active ? "text-maroon" : "text-ink"
@@ -159,6 +167,7 @@ export function SiteHeader() {
           })}
           <Link
             href="/join"
+            onClick={() => setOpen(false)}
             className="mt-8 inline-flex items-center justify-between bg-ink px-6 py-5 text-lg text-paper"
           >
             Join AEE
