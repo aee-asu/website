@@ -1,5 +1,6 @@
 /** Selected third-party opportunities, separate from AEE chapter events. */
 export type EnergyOpportunity = {
+  slug: string;
   title: string;
   date: string;
   time: string;
@@ -11,6 +12,7 @@ export type EnergyOpportunity = {
 
 export const energyOpportunities: EnergyOpportunity[] = [
   {
+    slug: "ryan-milcarek-energy-storage-webinar-2026",
     title: "Renewable energy storage challenges with Ryan Milcarek",
     date: "2026-10-14",
     time: "Noon–1:00 PM",

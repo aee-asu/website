@@ -82,6 +82,7 @@ Things worth knowing:
 - **Events hosted by other ASU groups** belong in `src/data/energyOpportunities.ts`, not the chapter event list. Verify the organizer, date, time and registration on the original page. The separate “Around ASU” section on Events labels the host and hides expired listings after their day in Arizona.
 - Check [Fulton Inner Circle events](https://innercircle.engineering.asu.edu/tag/events/) regularly for relevant energy, power, storage and grid opportunities. Add only useful, verified items with a direct source link; review the source before changing details.
 - The [daily Inner Circle finder](docs/inner-circle-finder.md) scans events, deadlines and resources into a review issue. It drops expired dated candidates; officers still verify and publish selected items.
+- Every published event has a shareable page at `/events/<slug>` (the hackathon keeps `/hackathon`). Use that URL in announcements and calendar invites. The page stays available after the event; the Events list still moves chapter events to its archive and hides expired external opportunities.
 
 - **You never move events between lists.** The site compares each event's date to today and files it under Upcoming or Archive automatically. An event stays "upcoming" until the end of its own day.
 - **`status: "draft"` hides an event completely.** Use it for anything not yet confirmed — it stays in the file as a note to yourself without appearing publicly.

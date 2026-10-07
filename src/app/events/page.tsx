@@ -65,14 +65,17 @@ export default function EventsPage() {
         <article className={styles.brief}>
           <div>
             <p className={styles.date}><time dateTime={item.date}>{new Intl.DateTimeFormat("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" }).format(new Date(`${item.date}T12:00:00Z`))}</time></p>
-            <h3 className={styles.eventTitle}>{item.title}</h3>
+            <h3 className={styles.eventTitle}><Link className={styles.textLink} href={`/events/${item.slug}`}>{item.title}</Link></h3>
             <dl className={styles.metadata}>
               <div><dt>Time</dt><dd>{item.time} (Arizona time)</dd></div>
               <div><dt>Where</dt><dd>{item.location}</dd></div>
               <div><dt>Host</dt><dd>{item.host}</dd></div>
             </dl>
           </div>
-          <div className={styles.attendance}><a className={`${styles.textLink} ${styles.actionLink}`} href={item.sourceUrl}>Details and registration ↗</a></div>
+          <div className={styles.attendance}>
+            <Link className={`${styles.textLink} ${styles.actionLink}`} href={`/events/${item.slug}`}>Shareable event page →</Link>
+            <a className={`${styles.textLink} ${styles.actionLink}`} href={item.sourceUrl}>ASU details and registration ↗</a>
+          </div>
           <div className={styles.briefBody}><p>{item.description}</p></div>
         </article>
       </li>)}</ul>}

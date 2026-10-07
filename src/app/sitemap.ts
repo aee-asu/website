@@ -1,17 +1,24 @@
 import type { MetadataRoute } from "next";
 
+import { energyOpportunities } from "@/data/energyOpportunities";
+import { events } from "@/data/events";
 import { site } from "@/data/site";
 
 const routes = [
   { path: "", priority: 1 },
   { path: "/about", priority: 0.8 },
   { path: "/events", priority: 0.8 },
-  { path: "/events/asu-aep-solar-fab-tour-2026", priority: 0.7 },
   { path: "/hackathon", priority: 0.9 },
   { path: "/research", priority: 0.8 },
   { path: "/gallery", priority: 0.6 },
   { path: "/join", priority: 0.9 },
   { path: "/partner", priority: 0.8 },
+];
+
+const eventRoutes = [
+  ...events.filter(event => event.status === "published" && event.href !== "/hackathon")
+    .map(event => ({ path: event.href ?? `/events/${event.slug}`, priority: 0.7 })),
+  ...energyOpportunities.map(item => ({ path: `/events/${item.slug}`, priority: 0.6 })),
 ];
 
 /*
@@ -20,7 +27,7 @@ const routes = [
   deploy — a worse signal than no signal at all.
 */
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
+  return [...routes, ...eventRoutes].map((route) => ({
     url: `${site.url}${route.path}`,
     changeFrequency: route.path === "/events" ? "weekly" : "monthly",
     priority: route.priority,

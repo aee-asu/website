@@ -111,7 +111,7 @@ export function eventSchema(event: ChapterEvent, path = "/events") {
     eventAttendanceMode: event.attendanceMode === "hybrid"
       ? "https://schema.org/MixedEventAttendanceMode"
       : "https://schema.org/OfflineEventAttendanceMode",
-    url: `${site.url}${event.href ?? `${path}#${event.slug}`}`,
+    url: `${site.url}${event.href ?? `${path}/${event.slug}`}`,
     location: {
       "@type": "Place",
       name: [event.location, event.campus].filter(Boolean).join(", "),

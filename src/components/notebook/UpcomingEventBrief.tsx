@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ChapterEvent } from "@/data/events";
 import { formatDate } from "@/lib/date";
 import { AttendanceAction, EventMetadata } from "./Notebook";
@@ -7,8 +8,9 @@ export function UpcomingEventBrief({ event, compact = false }: { event: ChapterE
   return <article id={compact ? `next-${event.slug}` : event.slug} className={`${styles.brief} ${compact ? styles.compact : ""}`} data-event-mode="upcoming">
     <div>
       <p className={styles.date}><time dateTime={event.date}>{formatDate(event.date, event.endDate)}</time></p>
-      <h3 className={styles.eventTitle}>{event.title}</h3>
+      <h3 className={styles.eventTitle}><Link className={styles.textLink} href={event.href ?? `/events/${event.slug}`}>{event.title}</Link></h3>
       <EventMetadata event={event} upcoming />
+      <Link className={`${styles.textLink} ${styles.actionLink}`} href={event.href ?? `/events/${event.slug}`}>Event page →</Link>
     </div>
     <AttendanceAction event={event} />
     {!compact && <div className={styles.briefBody}>

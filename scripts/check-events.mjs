@@ -30,6 +30,7 @@ calendarEvents.forEach((event, index) => {
   assert.equal(url.searchParams.get('etz'), 'America/Phoenix');
   assert.equal(url.searchParams.get('text'), event.title);
   assert.ok(url.searchParams.get('details').includes(event.registrationUrl));
+  assert.ok(url.searchParams.get('details').includes(`https://www.aeeasu.com/events/${event.slug}`));
   assert.ok(url.searchParams.get('location').includes(event.location));
 });
 const calendarExample = calendarEvents[0];

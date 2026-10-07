@@ -53,7 +53,7 @@ export default function HomePage() {
       {leadPhoto && leadEvent && <div className={styles.lead}>
         <DocumentaryFigure src={leadPhoto.src} alt={leadPhoto.alt} width={leadPhoto.width} height={leadPhoto.height} priority
           sizes="(min-width: 1360px) 730px, (min-width: 1024px) 56vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 48px)"
-          caption={<><strong>{leadEvent.title} · {formatDate(leadEvent.date)}</strong><span>Students examining samples inside the solar fab.</span><br /><Link className={styles.textLink} href={`/events#${leadEvent.slug}`}>View event record <span aria-hidden>&nbsp;→</span></Link></>} />
+          caption={<><strong>{leadEvent.title} · {formatDate(leadEvent.date)}</strong><span>Students examining samples inside the solar fab.</span><br /><Link className={styles.textLink} href={leadEvent.href ?? `/events/${leadEvent.slug}`}>View event record <span aria-hidden>&nbsp;→</span></Link></>} />
       </div>}
     </div>
 

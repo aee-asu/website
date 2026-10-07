@@ -10,7 +10,7 @@ export function PastEventRecord({ event, preview = false, headingLevel = 3 }: { 
   return <article id={preview ? undefined : event.slug} className={`${styles.record} ${hasImage ? "" : styles.textRecord}`} data-event-mode="past">
     <div className={styles.recordHeader}>
       <p className={styles.date}><time dateTime={event.date}>{formatDate(event.date, event.endDate)}</time><span className={styles.category}> · {event.category}</span></p>
-      <Heading className={styles.eventTitle}>{event.title}</Heading>
+      <Heading className={styles.eventTitle}><Link className={styles.textLink} href={event.href ?? `/events/${event.slug}`}>{event.title}</Link></Heading>
       <EventMetadata event={event} />
     </div>
     {event.image && event.imageAlt && <div className={styles.recordFigure}>
@@ -23,7 +23,7 @@ export function PastEventRecord({ event, preview = false, headingLevel = 3 }: { 
       <TechnicalTopics topics={event.topics} />
       {!preview && event.learningOutcomes?.length ? <div><h5>Verified learning outcomes</h5><ul className={styles.points}>{event.learningOutcomes.map(outcome => <li key={outcome}>{outcome}</li>)}</ul></div> : null}
       {event.details?.length ? <dl className={styles.facts}>{event.details.map(detail => <div key={detail.label}><dt>{detail.label}</dt><dd>{detail.value}</dd></div>)}</dl> : null}
-      {preview || event.href ? <div className={styles.recordAction}><Link className={`${styles.textLink} ${styles.actionLink}`} href={event.href ?? `/events#${event.slug}`}>{event.href ? "Read the event story" : "View event record"}<span aria-hidden>&nbsp;→</span></Link></div> : null}
+      <div className={styles.recordAction}><Link className={`${styles.textLink} ${styles.actionLink}`} href={event.href ?? `/events/${event.slug}`}>{event.href ? "Read the event story" : "View event page"}<span aria-hidden>&nbsp;→</span></Link></div>
     </div>
   </article>;
 }

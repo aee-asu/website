@@ -11,7 +11,7 @@ export function googleCalendarUrl(event: ChapterEvent): string | undefined {
   const details = [
     event.description,
     event.registrationUrl ? `RSVP: ${event.registrationUrl}` : "Check the event page for registration details.",
-    `Latest details: ${site.url}${event.href ?? `/events#${event.slug}`}`,
+    `Latest details: ${site.url}${event.href ?? `/events/${event.slug}`}`,
     "Saving this event does not register you. This calendar copy will not update automatically; check the event page before attending.",
   ].join("\n\n");
   const params = new URLSearchParams({

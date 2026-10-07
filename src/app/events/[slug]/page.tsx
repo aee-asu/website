@@ -2,30 +2,44 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { DocumentaryFigure, EventMetadata, TechnicalTopics } from "@/components/notebook/Notebook";
+import { JsonLd } from "@/components/JsonLd";
+import { AttendanceAction, DocumentaryFigure, EventMetadata, TechnicalTopics } from "@/components/notebook/Notebook";
 import styles from "@/components/notebook/Notebook.module.css";
-import { events } from "@/data/events";
+import { energyOpportunities, type EnergyOpportunity } from "@/data/energyOpportunities";
+import { events, type ChapterEvent } from "@/data/events";
 import { fieldNotes } from "@/data/fieldNotes";
 import { gallery } from "@/data/gallery";
 import { formatDate } from "@/lib/date";
-import { pageMeta } from "@/lib/seo";
+import { isPastEvent } from "@/lib/events";
+import { eventSchema, pageMeta } from "@/lib/seo";
 
 export const dynamicParams = false;
 
 function getRecord(slug: string) {
-  const note = fieldNotes.find(note => note.eventSlug === slug);
   const event = events.find(event => event.slug === slug && event.status === "published");
-  if (!note || !event) notFound();
-  return { note, event };
+  if (event && event.href !== "/hackathon") {
+    return { kind: "chapter" as const, event, note: fieldNotes.find(note => note.eventSlug === slug) };
+  }
+  const opportunity = energyOpportunities.find(item => item.slug === slug);
+  if (opportunity) return { kind: "outside" as const, opportunity };
+  notFound();
 }
 
 export function generateStaticParams() {
-  return fieldNotes.filter(note => events.some(event => event.slug === note.eventSlug && event.status === "published"))
-    .map(note => ({ slug: note.eventSlug }));
+  return [
+    ...events.filter(event => event.status === "published" && event.href !== "/hackathon").map(event => ({ slug: event.slug })),
+    ...energyOpportunities.map(item => ({ slug: item.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { event, note } = getRecord((await params).slug);
+  const record = getRecord((await params).slug);
+  if (record.kind === "outside") {
+    const { opportunity } = record;
+    return pageMeta({ title: opportunity.title, description: opportunity.description, path: `/events/${opportunity.slug}` });
+  }
+  const { event, note } = record;
+  if (!note) return pageMeta({ title: event.title, description: event.description, path: `/events/${event.slug}` });
   const meta = pageMeta({ title: `${event.title} — Field Note`, description: note.introduction, path: `/events/${event.slug}` });
   const photo = gallery.find(photo => photo.src === note.photographs[0]?.src);
   return {
@@ -35,8 +49,67 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function FieldNotePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { note, event } = getRecord((await params).slug);
+function ChapterEventPage({ event }: { event: ChapterEvent }) {
+  const past = isPastEvent(event);
+  return <article className={styles.page}>
+    <JsonLd data={eventSchema(event)} />
+    <div className={`${styles.shell} py-8 md:py-12`}>
+      <Link href={`/events#${event.slug}`} className={`${styles.textLink} ${styles.actionLink}`}>← All chapter events</Link>
+      <header className="mt-6 max-w-[70ch]">
+        <p className={styles.tab}>{past ? "Chapter event record" : "Upcoming chapter event"}</p>
+        <h1 className={`${styles.pageTitle} mt-5`}>{event.title}</h1>
+        <p className={`${styles.date} mt-5`}><time dateTime={event.date}>{formatDate(event.date, event.endDate)}</time></p>
+        <EventMetadata event={event} upcoming />
+        <TechnicalTopics topics={event.topics} />
+        <p className="mt-6 text-graphite">{event.recap ?? event.description}</p>
+      </header>
+      {!past && <AttendanceAction event={event} />}
+      {event.image && event.imageAlt && <div className="mt-8 max-w-[900px]">
+        <DocumentaryFigure src={event.image} alt={event.imageAlt} width={event.imageWidth ?? 1200} height={event.imageHeight ?? 900}
+          caption={event.imageCaption ?? event.imageAlt} sizes="(min-width: 1024px) 900px, calc(100vw - 48px)" />
+      </div>}
+      {event.learningObjectives?.length && !past ? <section className="mt-10 rule-t pt-6 max-w-[70ch]">
+        <h2 className={styles.sectionTitle}>What you&rsquo;ll explore</h2>
+        <ul className={`${styles.points} mt-5`}>{event.learningObjectives.map(item => <li key={item}>{item}</li>)}</ul>
+      </section> : null}
+      {event.learningOutcomes?.length ? <section className="mt-10 rule-t pt-6 max-w-[70ch]">
+        <h2 className={styles.sectionTitle}>Verified learning outcomes</h2>
+        <ul className={`${styles.points} mt-5`}>{event.learningOutcomes.map(item => <li key={item}>{item}</li>)}</ul>
+      </section> : null}
+      <footer className="mt-10 rule-t pt-6"><Link href="/events" className={`${styles.textLink} ${styles.actionLink}`}>All events →</Link></footer>
+    </div>
+  </article>;
+}
+
+function OutsideEventPage({ opportunity }: { opportunity: EnergyOpportunity }) {
+  return <article className={styles.page}>
+    <div className={`${styles.shell} py-8 md:py-12`}>
+      <Link href="/events#asu-opportunities" className={`${styles.textLink} ${styles.actionLink}`}>← Around ASU</Link>
+      <header className="mt-6 max-w-[70ch]">
+        <p className={styles.tab}>Around ASU</p>
+        <h1 className={`${styles.pageTitle} mt-5`}>{opportunity.title}</h1>
+        <p className={`${styles.date} mt-5`}><time dateTime={opportunity.date}>{formatDate(opportunity.date)}</time></p>
+        <dl className={styles.metadata}>
+          <div><dt>Time</dt><dd>{opportunity.time} · Arizona time</dd></div>
+          <div><dt>Where</dt><dd>{opportunity.location}</dd></div>
+          <div><dt>Host</dt><dd>{opportunity.host}</dd></div>
+        </dl>
+        <p className="mt-6 text-graphite">{opportunity.description}</p>
+      </header>
+      <div className="mt-8 max-w-[70ch]">
+        <a className={styles.button} href={opportunity.sourceUrl}>Original ASU listing ↗</a>
+        <p className="mt-4 text-sm text-graphite">Hosted by {opportunity.host}. Check the original listing for registration and any changes. AEE at ASU is sharing this opportunity.</p>
+      </div>
+      <footer className="mt-10 rule-t pt-6"><Link href="/events" className={`${styles.textLink} ${styles.actionLink}`}>All events →</Link></footer>
+    </div>
+  </article>;
+}
+
+export default async function EventPage({ params }: { params: Promise<{ slug: string }> }) {
+  const record = getRecord((await params).slug);
+  if (record.kind === "outside") return <OutsideEventPage opportunity={record.opportunity} />;
+  if (!record.note) return <ChapterEventPage event={record.event} />;
+  const { note, event } = record;
   const leadEntry = note.photographs[0];
   const leadPhoto = gallery.find(photo => photo.src === leadEntry?.src);
   return <article className={styles.page}>
