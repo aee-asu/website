@@ -1,0 +1,34 @@
+name: Inner Circle energy finder
+
+on:
+  schedule:
+    - cron: "17 15 * * *" # 8:17 a.m. Arizona time, year-round
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan public Inner Circle feed
+        run: python scripts/inner_circle_finder.py --output "$RUNNER_TEMP/inner-circle-report.md"
+      - name: Update standing review issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPORT: ${{ runner.temp }}/inner-circle-report.md
+        run: |
+          set -euo pipefail
+          number="$(gh issue list --state open --limit 100 --json number,title --jq '.[] | select(.title == "Inner Circle energy finder") | .number' | head -n 1)"
+          if [ -z "$number" ]; then
+            gh issue create --title "Inner Circle energy finder" --body-file "$REPORT"
+          else
+            gh issue view "$number" --json body --jq .body > "$RUNNER_TEMP/old-inner-circle-report.md"
+            if ! cmp -s "$REPORT" "$RUNNER_TEMP/old-inner-circle-report.md"; then
+              gh issue edit "$number" --body-file "$REPORT"
+              gh issue comment "$number" --body "The daily Inner Circle scan changed. Review the current candidate list and original ASU posts before updating the site."
+            fi
+          fi

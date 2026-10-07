@@ -1,5 +1,11 @@
 # October event confirmations — October 6, 2026
 
+## Related ASU energy opportunity
+
+- [Fulton Inner Circle: renewable energy storage webinar](https://innercircle.engineering.asu.edu/2026/10/explore-renewable-energy-storage-challenges-with-ryan-milcarek-oct-14/) (updated October 6, 2026) states Wednesday, October 14, noon–1 p.m., online, with Ryan Milcarek of SEMTE. It describes multiday low wind/solar periods, storage capacity, grid reliability, generation siting, historical load and weather data, and live Q&A. The page carries a registration link.
+- This is an ASU opportunity, not an AEE chapter event. It is listed separately on the Events page with the source link. The Zoom destination could not be independently fetched through the research browser, so the site points to the official Inner Circle page for details and registration.
+- [Fulton Inner Circle events](https://innercircle.engineering.asu.edu/tag/events/) is the repeat discovery source for relevant energy listings; dates and participation details require checking each original post before publication.
+
 User supplied official Sun Devil Central listings and RSVP URLs. Both public destinations were independently opened with Playwright and returned HTTP 200 without signing in or registering.
 
 - LEAPS: https://cglink.me/22J/r415366 redirects to https://sundevilcentral.eoss.asu.edu/AEEASU/rsvp_boot?id=415366. Confirms October 21, 10 AM–1 PM MST, SANCA 359, in-person, free RSVP, undergraduate/graduate audience, hands-on microgrids workshop covering storage, islanding, controls and distributed energy systems.
