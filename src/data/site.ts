@@ -28,7 +28,7 @@ export const site = {
 export const links = {
   join: "https://sundevilcentral.eoss.asu.edu/AEEASU/club_signup",
   instagram: "https://www.instagram.com/aee_asu/",
-  discord: "https://discord.gg/qvDFyk3tS",
+  discord: "https://discord.gg/wQQSaXVtZx",
   linkedin:
     "https://www.linkedin.com/company/association-of-energy-engineers-aee-at-asu",
   aeeCenter: "https://www.aeecenter.org/",
