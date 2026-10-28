@@ -27,7 +27,35 @@ const SOLAR_FAB = "ASU AEP Solar Fab Tour";
 const APPLIED_MATERIALS = "Applied Materials Industry Session";
 const SEPTEMBER = "September 2026";
 
+const SIEMENS = "Siemens Tech Talk";
+const SIEMENS_DATE = "October 26, 2026";
+
 export const gallery: GalleryImage[] = [
+  {
+    src: "/images/gallery/25-siemens-audience.jpg",
+    alt: "Students sit at long rows of desks in a lecture hall while the screens at the front show a speaker's photo and introduction.",
+    event: SIEMENS,
+    date: SIEMENS_DATE,
+    width: 2000,
+    height: 1500,
+    span: "wide",
+  },
+  {
+    src: "/images/gallery/24-siemens-relay-demo.jpg",
+    alt: "A Siemens speaker in a black polo points to the display of a protection relay mounted in a portable demonstration case.",
+    event: SIEMENS,
+    date: SIEMENS_DATE,
+    width: 1600,
+    height: 2133,
+  },
+  {
+    src: "/images/gallery/26-siemens-edp-talk.jpg",
+    alt: "A speaker holding a microphone stands beside a slide titled 'Siemens EDP, ASU Alumni Voice' with a quote from a recent graduate.",
+    event: SIEMENS,
+    date: SIEMENS_DATE,
+    width: 1600,
+    height: 2133,
+  },
   {
     src: "/images/events/open-house-2026.jpg",
     alt: "Two people stand beside the AEE table with chapter giveaways at an indoor student organization fair.",

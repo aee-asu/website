@@ -34,5 +34,10 @@
   { "src": "AEE Solar Fab tour/good_3.heic", "dest": "gallery/20-solar-fab-cleanroom.jpg", "maxWidth": 1600 },
   { "src": "AEE Solar Fab tour/good_4.JPG", "dest": "gallery/21-solar-fab-briefing.jpg", "maxWidth": 1800 },
   { "src": "AEE X AMAT Talk/Photo Sep 19 2026, 11 13 13.jpg", "dest": "gallery/22-applied-materials-talk.jpg", "maxWidth": 1600 },
-  { "src": "AEE X AMAT Talk/Photo Sep 19 2026, 11 13 03.jpg", "dest": "gallery/23-applied-materials-audience.jpg", "maxWidth": 2000 }
+  { "src": "AEE X AMAT Talk/Photo Sep 19 2026, 11 13 03.jpg", "dest": "gallery/23-applied-materials-audience.jpg", "maxWidth": 2000 },
+
+  { "src": "AEE X Siemens/IMG_7154.JPG", "dest": "events/siemens-tech-talk-2026.jpg", "maxWidth": 1800 },
+  { "src": "AEE X Siemens/IMG_7124.JPG", "dest": "gallery/24-siemens-relay-demo.jpg", "maxWidth": 1600 },
+  { "src": "AEE X Siemens/IMG_7100.JPG", "dest": "gallery/25-siemens-audience.jpg", "maxWidth": 2000 },
+  { "src": "AEE X Siemens/IMG_7151.JPG", "dest": "gallery/26-siemens-edp-talk.jpg", "maxWidth": 1600 }
 ]
