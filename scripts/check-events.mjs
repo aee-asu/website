@@ -20,8 +20,8 @@ function load(path) {
 }
 const {events} = load('../src/data/events.ts');
 const {googleCalendarUrl} = load('../src/lib/calendar.ts');
-const calendarEvents = events.filter(event => event.calendar);
-const expectedDates = ['20261009T000000Z/20261009T013000Z', '20261021T170000Z/20261021T200000Z', '20261027T010000Z/20261027T020000Z'];
+const calendarEvents = events.filter(event => event.calendar && event.status === 'published');
+const expectedDates = ['20261009T000000Z/20261009T013000Z', '20261027T010000Z/20261027T020000Z'];
 calendarEvents.forEach((event, index) => {
   const url = new URL(googleCalendarUrl(event));
   assert.equal(url.origin, 'https://calendar.google.com');

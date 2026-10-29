@@ -182,7 +182,7 @@ export const events: ChapterEvent[] = [
     description:
       "A hands-on workshop connecting classroom concepts with the design and operation of modern microgrids.",
     learningObjectives: ["Microgrids, energy storage and islanding", "Controls and technologies for managing distributed energy systems"],
-    status: "published",
+    status: "draft",
   },
   {
     slug: "aee-siemens-info-session-2026",
