@@ -23,4 +23,15 @@ export const energyOpportunities: EnergyOpportunity[] = [
     sourceUrl:
       "https://innercircle.engineering.asu.edu/2026/10/explore-renewable-energy-storage-challenges-with-ryan-milcarek-oct-14/",
   },
+  {
+    slug: "careers-sustainability-data-centers-2026",
+    title: "Careers in Sustainability, Data Centers, and Community Engagement",
+    date: "2026-11-13",
+    time: "9:00 AM–Noon",
+    location: "Walton Center for Planetary Health, room 107, Tempe campus",
+    host: "Arizona State University",
+    description:
+      "Three panels of industry leaders, public officials and nonprofit professionals on how data centers intersect with sustainability, resource use and local communities, and on career paths across these fields: building the data center ecosystem (power, projects, circularity and innovation); sustainability at scale (energy, water and responsible growth); and community engagement in practice. Free and open to students, faculty, staff and the public.",
+    sourceUrl: "https://asuevents.asu.edu/event/careers-sustainability-data-centers-and-community-engagement",
+  },
 ];
