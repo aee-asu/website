@@ -215,6 +215,22 @@ export const events: ChapterEvent[] = [
     registrationNote: "Free. RSVP through Sun Devil Central.",
     status: "published",
   },
+  {
+    slug: "tsmc-day-in-the-life-2026",
+    calendar: { start: "2026-11-19T18:00:00-07:00", end: "2026-11-19T20:00:00-07:00" },
+    title: "A Day in the Life at TSMC",
+    date: "2026-11-19",
+    time: "6:00–8:00 PM",
+    location: "PSH 152",
+    campus: "Tempe campus",
+    attendanceMode: "in-person",
+    organization: "TSMC",
+    host: "AEE × IEEE at ASU",
+    category: "Industry",
+    description: "An evening session, co-hosted with the IEEE student branch at ASU, on what a typical day of work looks like at TSMC.",
+    pendingDetails: ["RSVP link", "Speakers and agenda"],
+    status: "published",
+  },
 
   /* ---------------------------------------------------------------- Spring 2026 */
   {
