@@ -154,14 +154,19 @@ export const events: ChapterEvent[] = [
     title: "AEE × IEEE-HKN Town Hall & Mixer",
     registrationUrl: "https://sundevilcentral.eoss.asu.edu/hkn/rsvp_boot?id=407681",
     registrationNote: "Free. RSVP through IEEE-HKN on Sun Devil Central.",
-    pendingDetails: ["Arrival instructions", "Audience and capacity"],
     date: "2026-10-08",
     time: "5:00–6:30 PM",
     location: "GWC 487",
     campus: "Tempe campus",
     category: "Community",
     description:
-      "A town hall and mixer held jointly with IEEE-HKN. Come meet members of both organizations.",
+      "A town hall and mixer held jointly with IEEE-HKN, where members of both organizations met and got to know each other.",
+    image: "/images/events/hkn-town-hall-2026.jpg",
+    imageWidth: 1570,
+    imageHeight: 1159,
+    imageCaption: "Members of AEE and IEEE-HKN mixing during an icebreaker at the town hall.",
+    imageAlt:
+      "Students stand and talk between rows of desks in a classroom, holding worksheets, while a projector screen shows a people-bingo icebreaker grid.",
     status: "published",
   },
   {
